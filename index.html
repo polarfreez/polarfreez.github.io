@@ -1,91 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Meu Site</title>
-  <style>
-    @font-face {
-      font-family: 'monogram-extended';
-      src: url('monogram-extended.ttf') format('truetype');
-    }
-
-    body {
-      font-family: 'monogram-extended', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f1f1f1;
-    }
-
-    .header {
-      background-color: #333;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
-    .header nav {
-      display: flex;
-      align-items: center;
-    }
-
-    .header nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 15px;
-    }
-
-    .header nav a:hover {
-      color: #999;
-    }
-
-    .main {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 15px;
-      padding: 15px;
-    }
-
-    .main p {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.5;
-    }
-
-    .main img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 600px) {
-      .main {
-        grid-template-columns
-      grid-template-columns: repeat(1, 1fr);
-    }
-  </style>
+  <title>Braun's Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <div class="header">
-    <h1>Braunx</h1>
+  <header>
+    <h1>Braunx's Portfolio</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="https://braunxx.github.io/arts/">My Arts</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/arts">Arts</a></li>
+      </ul>
     </nav>
-  </div>
-  <div class="main">
-    <p>Olá, eu sou <strong>Braunx</strong>. Bem-vindo ao meu site!</p>
-    <img src="image1.jpg" alt="Art piece 1">
-    <img src="image2.jpg" alt="Art piece 2">
-    <img src="image3.jpg" alt="Art piece 3">
-  </div>
+  </header>
+  <main>
+    <!-- Page content goes here -->
+  </main>
+  <footer>
+    <p>Copyright Braunx 2021</p>
+  </footer>
 </body>
 </html>
