@@ -5,128 +5,130 @@
   <title>Home - Braunx</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Add your CSS styles here */
+    /* Adicione seus estilos CSS aqui */
     body {
       font-family: 'Roboto', Arial, sans-serif;
       background: linear-gradient(to right, #0d1117, #1d232d);
       color: #fff;
     }
+
     .main-container {
       max-width: 800px;
       margin: 0 auto;
-        padding: 20px;
+      padding: 20px;
+    }
+
+    .header {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 2em;
+      color: #5d5dff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .header a {
+      text-decoration: none;
+      color: #5d5dff;
+    }
+
+    .header a:hover {
+      color: #8989ff;
     }
 
     .sidebar {
-      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 250px;
       background: #333;
-      color: #fff;
       padding: 20px;
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+
+    .sidebar.hidden {
+      transform: translateX(-250px);
     }
 
     .sidebar h2 {
       font-size: 1.5em;
       margin-bottom: 10px;
-      color: #5d5dff;
+      color: #fff;
     }
 
     .sidebar ul {
       list-style: none;
+      margin: 0;
       padding: 0;
     }
 
     .sidebar li {
       margin-bottom: 10px;
     }
-    
+
     .sidebar a {
-      text-decoration: none;
-      color: #999;
       display: block;
-      padding: 10px;
-      transition: all 0.3s;
+      color: #fff;
+      text-decoration: none;
     }
 
     .sidebar a:hover {
-      background: #444;
-      color: #fff;
+      color: #8989ff;
     }
 
-    .main-content {
-      flex: 1;
-      padding: 20px;
-    }
-
-    .main-content h1 {
-      font-size: 2em;
+    .btn-toggle-sidebar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
       color: #5d5dff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-
-    .main-content p {
-      font-size: 1em;
-      color: #999;
-      line-height: 1.5;
-    }
-
-    .main-content img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s;
-    }
-
-    .main-content img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
 <body>
-  <div class="main-container">
-    <div class="sidebar">
-      <h2>Menu</h2>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="main-content">
-      <h1 id="about">About</h1>
-      <p>Hi, I'm Braunx! I'm a web developer and designer with a passion for creating beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and various frameworks and libraries such as React, Angular, and Bootstrap. I am always looking to learn new technologies and improve my skills in order to create the best products for my clients. When I'm not coding, you can find me playing video games, watching movies, or exploring the outdoors. </p>
-      <img src="/images/profile.jpg" alt="Profile picture of Braunx">
-      <h1 id="experience">Experience</h1>
-      <p>I have worked as a web developer for various companies over the past few years, including XYZ Inc and ABC Corp. During my time at these companies, I have gained valuable experience in working with clients to understand their needs and deliver high-quality products. I have also learned how to work effectively in a team and meet deadlines in a fast-paced environment. </p>
-      <h1 id="skills">Skills</h1>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Angular</li>
-        <li>Bootstrap</li>
-      </ul>
-      <h1 id="projects">Projects</h1>
-      <p>I have worked on various projects over the years, including a redesign of a company's website, a custom e-commerce platform, and a mobile app for a local business. Here are a few of my most recent projects:</p>
-      <ul>
-        <li>Project 1 - A responsive website for a small business</li>
-        <li>Project 2 - A CRM system for a real estate company</li>
-        <li>Project 3 - A landing page for a new product launch</li>
-      </ul>
-      <h1 id="contact">Contact</h1>
-      <p>Feel free to reach out to me if you have any questions or would like to work together on a project. You can contact me via email at braunx@example.com or through my social media links below:</p>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/braunx/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://twitter.com/braunx_dev" target="_blank">Twitter</a></li>
-        <li><a href="https://www.instagram.com/braunx_dev/" target="_blank">Instagram</a></li>
-      </ul>
-    </div>
+  <button class="btn-toggle-sidebar">Menu</button>
+  <div class="sidebar hidden">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">
+<li><a href="#">Sobre mim</a></li>
+<li><a href="#">Projetos</a></li>
+<li><a href="#">Contato</a></li>
+</ul>
+</div>
+<div class="main-container">
+<div class="header">
+  <h1>Home - Braunx</h1>
+  <a href="#">Contato</a>
+</div>
+<div class="content">
+  <h2>Sobre mim</h2>
+  <p>Meu nome é Braunx e sou desenvolvedor web. Sou apaixonado por tecnologia e gosto de estar sempre atualizado com as últimas tendências e práticas do mundo da programação. Além disso, também gosto de me aventurar em projetos pessoais como jogos e aplicativos mobile.</p>
+  <h2>Projetos</h2>
+  <ul>
+    <li>Projeto 1</li>
+    <li>Projeto 2</li>
+    <li>Projeto 3</li>
+  </ul>
+</div>
+</div>
 
-  </div>
+<!-- Adicione o JavaScript aqui -->
+<script>
+  const toggleSidebar = () => {
+    document.querySelector('.sidebar').classList.toggle('hidden');
+  }
+  document.querySelector('.btn-toggle-sidebar').addEventListener('click', toggleSidebar);
+</script>
 </body>
 </html>
