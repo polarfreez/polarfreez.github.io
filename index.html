@@ -13,13 +13,13 @@
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/arts">Arts</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-       </nav>
+        </nav>
         <button id="toggle-sidebar">Toggle Sidebar</button>
-</aside>
-
+      </aside>
     </div>
     <div class="intro">
       <h2>Welcome to my portfolio!</h2>
@@ -27,5 +27,13 @@
       <p>Thank you for visiting!</p>
     </div>
   </div>
+  <script>
+    const toggleButton = document.getElementById("toggle-sidebar");
+    const sidebar = document.querySelector(".sidebar");
+
+    toggleButton.addEventListener("click", function() {
+      sidebar.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
