@@ -23,21 +23,43 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .header h1 {
   font-size: 2em;
   color: #5d5dff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.header h1:hover {
+  color: #8989ff;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header a {
   text-decoration: none;
   color: #5d5dff;
+  transition: all 0.3s;
 }
 
 .header a:hover {
   color: #8989ff;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #0d1117, #1d232d);
+  z-index: -1;
+  transform: skewX(-25deg);
+  transform-origin: left;
 }
 
 .profile-container {
@@ -76,11 +98,12 @@
   font-size: 1em;
   color: #999;
   margin-bottom: 10px;
-}
+  }
 
 .profile-info a {
   text-decoration: none;
   color: #5d5dff;
+  transition: all 0.3s;
 }
 
 .profile-info a:hover {
@@ -97,6 +120,7 @@
   text-decoration: none;
   color: #999;
   margin-right: 10px;
+  transition: all 0.3s;
 }
 
 .links a:hover {
@@ -108,13 +132,13 @@
   height: 20px;
   margin-right: 10px;
 }
-    .about-me {
-font-size: 1em;
-color: #999;
-margin-bottom: 20px;
-}
-</style>
 
+.about-me {
+  font-size: 1em;
+  color: #999;
+  margin-bottom: 20px;
+}
+  </style>
 </head>
 <body>
   <div class="main-container">
