@@ -8,17 +8,18 @@
     /* Add your CSS styles here */
     body {
       font-family: 'Roboto', Arial, sans-serif;
-      background: #f6f8fa;
-      color: #000;
+      background: linear-gradient(to right, #0d1117, #1d232d);
+      color: #fff;
     }
-    .main-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+Copy code
+.main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    .header {
-      display: flex;
+.header {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -26,98 +27,28 @@
 
 .header h1 {
   font-size: 2em;
-  color: #333;
+  color: #5d5dff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header a {
   text-decoration: none;
-  color: #333;
+  color: #5d5dff;
 }
 
 .header a:hover {
   color: #8989ff;
 }
 
-.sidebar {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100%;
-  background: #333;
-  color: #fff;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.sidebar h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #999;
-}
-
-.sidebar ul li a:hover {
-  color: #fff;
-}
-
-.menu-btn {
+.about {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: #333;
-  color: #fff;
-  font-size: 1.5em;
-  border-radius: 50%;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
+  margin-bottom: 20px;
 }
 
-.menu-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.content {
-  margin-top: 80px;
-  margin-left: 250px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.profile-container
-    {
-display: flex;
-align-items: center;
-margin-bottom: 20px;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
+.about img {
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   margin-right: 20px;
@@ -125,75 +56,36 @@ margin-bottom: 20px;
   transition: all 0.3s;
 }
 
-.profile-pic:hover {
+.about img:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.profile-info h2 {
+.about h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #333;
+  color: #5d5dff;
 }
 
-.profile-info p {
+.about p {
   font-size: 1em;
   color: #999;
-  margin-bottom: 10px;
-}
-
-.profile-info a {
-  text-decoration: none;
-  color: #333;
-}
-
-.profile-info a:hover {
-  color: #8989ff;
 }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Menu</h2>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-  <div class="menu-btn">&#9776;</div>
   <div class="main-container">
     <div class="header">
-      <h1>Home - Braunx</h1>
-      <a href="#">Contact</a>
+      <h1>Braunx</h1>
+      <a href="/arts">Arts</a> | <a href="#">Contact</a>
     </div>
-    <div class="content">
-      <div class="profile-container">
-        <img src="/images/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="profile-info">
-          <h2>Braunx</h2>
-          <p>Software developer and artist</p>
-          <a href="#">GitHub</a>
-        </div>
+    <div class="about">
+      <img src="/images/profile.jpg" alt="Profile Picture">
+      <div>
+        <h2>About Me</h2>
+        <p>Hi, I'm Braunx and I am a 3D artist specializing in Blender. I have a passion for creating beautiful and realistic 3D models and animations. On this site, you can find a collection of my art pieces and learn more about me and my work.</p>
       </div>
-      <p>Welcome to my home page! Here you can find information about me and my work. I am a software developer and artist, with a passion for creating beautiful and functional applications and digital art pieces.</p>
     </div>
   </div>
-  <script>
-    // Add your JavaScript code here
-    const menuBtn = document.querySelector('.menu-btn');
-    const sidebar = document.querySelector('.sidebar');
-    menuBtn.addEventListener('click', function() {
-      sidebar.style.display = (sidebar.style.display === 'block') ? 'none' : 'block';
-    });
-  </script>
 </body>
 </html>
