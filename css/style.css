@@ -32,16 +32,40 @@ body {
   color: #8989ff;
 }
 
-.header nav ul {
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
-.header nav li {
-  margin: 0 10px;
+.sidebar nav li {
+  margin: 10px 0;
 }
+
+.sidebar nav a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  color: #00b8d4;
+}
+
 
 .intro {
   padding: 20px;
