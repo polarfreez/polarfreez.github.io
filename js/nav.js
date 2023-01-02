@@ -1,12 +1,6 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav-link');
+const toggleButton = document.getElementById("toggle-sidebar");
+const sidebar = document.querySelector(".sidebar");
 
-navToggle.addEventListener('click', () => {
-  document.body.classList.toggle('nav-open');
-});
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    document.body.classList.remove('nav-open');
-  });
+toggleButton.addEventListener("click", function() {
+  sidebar.classList.toggle("active");
 });
