@@ -11,7 +11,7 @@
       background: linear-gradient(to right, #0d1117, #1d232d);
       color: #fff;
     }
-Copy code
+
 .main-container {
   max-width: 800px;
   margin: 0 auto;
@@ -40,51 +40,102 @@ Copy code
   color: #8989ff;
 }
 
-.about {
+.profile-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.about img {
+.profile-image {
   width: 200px;
   height: 200px;
+  border-radius: 100px;
   object-fit: cover;
-  border-radius: 50%;
-  margin-right: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
+  margin-right: 20px;
 }
 
-.about img:hover {
+.profile-image:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.about h2 {
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #5d5dff;
 }
 
-.about p {
+.profile-info p {
   font-size: 1em;
   color: #999;
+  margin-bottom: 10px;
 }
-  </style>
+
+.profile-info a {
+  text-decoration: none;
+  color: #5d5dff;
+}
+
+.profile-info a:hover {
+  color: #8989ff;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #999;
+  margin-right: 10px;
+}
+
+.links a:hover {
+  color: #5d5dff;
+}
+
+.links img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+    .about-me {
+font-size: 1em;
+color: #999;
+margin-bottom: 20px;
+}
+</style>
+
 </head>
 <body>
   <div class="main-container">
     <div class="header">
       <h1>Braunx</h1>
-      <a href="/arts">Arts</a> | <a href="#">Contact</a>
+      <a href="/arts">Arts</a>
     </div>
-    <div class="about">
-      <img src="/images/profile.jpg" alt="Profile Picture">
-      <div>
-        <h2>About Me</h2>
-        <p>Hi, I'm Braunx and I am a 3D artist specializing in Blender. I have a passion for creating beautiful and realistic 3D models and animations. On this site, you can find a collection of my art pieces and learn more about me and my work.</p>
+    <div class="profile-container">
+      <img src="/images/profile.jpg" alt="Profile image" class="profile-image">
+      <div class="profile-info">
+        <h2>Braunx</h2>
+        <p>Full Stack Developer</p>
+        <p>Blender Artist</p>
+        <div class="links">
+          <a href="#"><img src="/images/github.svg" alt="GitHub logo">GitHub</a>
+          <a href="#"><img src="/images/linkedin.svg" alt="LinkedIn logo">LinkedIn</a>
+        </div>
       </div>
+    </div>
+    <div class="about-me">
+      <p>Hi, my name is Braunx and I am a full stack developer and Blender artist. I love creating and sharing my art with the world. In my free time, I enjoy learning new technologies and techniques to improve my skills. Thank you for visiting my portfolio, I hope you enjoy my work!</p>
     </div>
   </div>
 </body>
