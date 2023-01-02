@@ -5,13 +5,12 @@
   <title>Home - Braunx</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Adicione seus estilos CSS aqui */
+    /* Add your CSS styles here */
     body {
       font-family: 'Roboto', Arial, sans-serif;
-      background: linear-gradient(to right, #0d1117, #1d232d);
-      color: #fff;
+      background: #f6f8fa;
+      color: #000;
     }
-
     .main-container {
       max-width: 800px;
       margin: 0 auto;
@@ -20,115 +19,181 @@
 
     .header {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
-    .header h1 {
-      font-size: 2em;
-      color: #5d5dff;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
+.header h1 {
+  font-size: 2em;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
 
-    .header a {
-      text-decoration: none;
-      color: #5d5dff;
-    }
+.header a {
+  text-decoration: none;
+  color: #333;
+}
 
-    .header a:hover {
-      color: #8989ff;
-    }
+.header a:hover {
+  color: #8989ff;
+}
 
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 250px;
-      background: #333;
-      padding: 20px;
-      box-sizing: border-box;
-      transition: all 0.3s;
-    }
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    .sidebar.hidden {
-      transform: translateX(-250px);
-    }
+.sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
 
-    .sidebar h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      color: #fff;
-    }
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .sidebar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+.sidebar ul li {
+  margin-bottom: 10px;
+}
 
-    .sidebar li {
-      margin-bottom: 10px;
-    }
+.sidebar ul li a {
+  text-decoration: none;
+  color: #999;
+}
 
-    .sidebar a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-    }
+.sidebar ul li a:hover {
+  color: #fff;
+}
 
-    .sidebar a:hover {
-      color: #8989ff;
-    }
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  color: #fff;
+  font-size: 1.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
 
-    .btn-toggle-sidebar {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: transparent;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      color: #5d5dff;
-    }
+.menu-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  margin-top: 80px;
+  margin-left: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.profile-container
+    {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-info h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-info p {
+  font-size: 1em;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.profile-info a {
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-info a:hover {
+  color: #8989ff;
+}
   </style>
 </head>
 <body>
-  <button class="btn-toggle-sidebar">Menu</button>
-  <div class="sidebar hidden">
+  <div class="sidebar">
     <h2>Menu</h2>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#">
-      <li><a href="#">Sobre mim</a></li>
-      <li><a href="#">Projetos</a></li>
-      <li><a href="#">Contato</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
+  </div>
+  <div class="menu-btn">&#9776;</div>
+  <div class="main-container">
+    <div class="header">
+      <h1>Home - Braunx</h1>
+      <a href="#">Contact</a>
     </div>
-<div class="main-container">
-<div class="header">
-  <h1>Home - Braunx</h1>
-  <a href="#">Contato</a>
-</div>
-<div class="content">
-  <h2>Sobre mim</h2>
-  <p>Meu nome é Braunx e sou desenvolvedor web. Sou apaixonado por tecnologia e gosto de estar sempre atualizado com as últimas tendências e práticas do mundo da programação. Além disso, também gosto de me aventurar em projetos pessoais como jogos e aplicativos mobile.</p>
-  <h2>Projetos</h2>
-  <ul>
-    <li>Projeto 1</li>
-    <li>Projeto 2</li>
-    <li>Projeto 3</li>
-  </ul>
-</div>
-</div>
-
-<!-- Adicione o JavaScript aqui -->
-<script>
-  const toggleSidebar = () => {
-    document.querySelector('.sidebar').classList.toggle('hidden');
-  }
-  document.querySelector('.btn-toggle-sidebar').addEventListener('click', toggleSidebar);
-</script>
+    <div class="content">
+      <div class="profile-container">
+        <img src="/images/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-info">
+          <h2>Braunx</h2>
+          <p>Software developer and artist</p>
+          <a href="#">GitHub</a>
+        </div>
+      </div>
+      <p>Welcome to my home page! Here you can find information about me and my work. I am a software developer and artist, with a passion for creating beautiful and functional applications and digital art pieces.</p>
+    </div>
+  </div>
+  <script>
+    // Add your JavaScript code here
+    const menuBtn = document.querySelector('.menu-btn');
+    const sidebar = document.querySelector('.sidebar');
+    menuBtn.addEventListener('click', function() {
+      sidebar.style.display = (sidebar.style.display === 'block') ? 'none' : 'block';
+    });
+  </script>
 </body>
 </html>
