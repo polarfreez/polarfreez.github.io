@@ -206,7 +206,7 @@ function changeWord() {
   var i = 0;
   // Adiciona cada letra da palavra com uma pausa de 100 milissegundos
   function addLetter() {
-    element.innerHTML += word[i];
+    element.innerHTML = words[currentWord] + '<span id="cursor">_</span>';
     i++;
     if (i < word.length) {
       setTimeout(addLetter, 100);
