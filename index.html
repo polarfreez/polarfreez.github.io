@@ -94,6 +94,22 @@
     overflow: hidden;
     width: auto;
   }
+    
+    /* Adicione a classe fadeout para exibir a animação de apagando */
+.fadeout {
+  animation: fadeout 0.5s;
+}
+
+/* Defina a animação de apagando */
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 
 .profile-info {
   display: flex;
@@ -181,25 +197,30 @@ var words = ['Artista', 'Desenvolvedor', 'Estudante', 'Criador de Conteúdo'];
 var element = document.getElementById('words');
 var currentWord = 0;
 
+var words = ['palavra 1', 'palavra 2', 'palavra 3'];
+var element = document.getElementById('words');
+var currentWord = 0;
+
 function changeWord() {
-  var word = words[currentWord];
-  var i = 0;
-  function addLetter() {
-    element.innerHTML += word[i];
-    i++;
-    if (i < word.length) {
-      setTimeout(addLetter, 100); // pausa de 100 milissegundos entre cada letra
-    }
-  }
-  element.innerHTML = '';
-  addLetter();
+  element.innerHTML = words[currentWord];
   currentWord++;
   if (currentWord >= words.length) {
     currentWord = 0;
   }
+  // Adicione uma pausa de 3 segundos antes de apagar a palavra
+  setTimeout(function() {
+    element.classList.add('fadeout');
+  }, 3000);
 }
 
-setInterval(changeWord, 5000);
+// Quando a animação de apagando terminar, remova a classe fadeout e chame a função changeWord novamente
+element.addEventListener('animationend', function() {
+  element.classList.remove('fadeout');
+  changeWord();
+});
+
+setInterval(changeWord, 5000); // chama a função a cada 5 segundos
+
 </script>
 </body>
 </html>
