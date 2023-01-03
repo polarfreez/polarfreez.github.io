@@ -178,7 +178,7 @@
       <img src="/images/profile.jpg" alt="Profile image" class="profile-image">
       <div class="profile-info">
         <h2>Braunx</h2>
-        <div id="words"><p>.</p></div>
+        <div id="words"><span id="cursor">_</span></div>
         <p>Blender Artist</p>
         <div class="links">
           <a href="https://github.com/braunxx"><img src="/images/github.svg" alt="GitHub logo">GitHub</a>
@@ -196,11 +196,7 @@
 var words = ['Artista', 'Desenvolvedor', 'Estudante', 'Criador de Conteúdo'];
 var element = document.getElementById('words');
 var currentWord = 0;
-
-var words = ['palavra 1', 'palavra 2', 'palavra 3'];
-var element = document.getElementById('words');
 var cursor = document.getElementById('cursor');
-var currentWord = 0;
 var isCursorVisible = true;
 
 function changeWord() {
