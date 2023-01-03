@@ -152,7 +152,7 @@ opacity: 0;
 }
     
     .btn{
-
+margin: auto;
 font-family: Roboto, sans-serif;
 font-weight: 0;
 font-size: 14px;
@@ -203,7 +203,7 @@ border: none;
     </div>
   </div>
 </div>
-    <button class="btn", href="/arts">Minhas Artes</button>
+    <button class="btn">Minhas Artes</button>
   </div>
   <script>
     // Adicione o seu JavaScript aqui
@@ -237,6 +237,10 @@ setTimeout(type, 2000);
 }
 
 type();
+    
+  document.getElementById("myButton").addEventListener("click", function() {
+    window.location.href = "/arts";
+  });
   </script>
 </body>
 </html>
