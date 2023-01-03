@@ -178,29 +178,28 @@
   <script>
 // Array de palavras que serão exibidas
 var words = ['Artista', 'Desenvolvedor', 'Estudante', 'Criador de Conteúdo'];
+var element = document.getElementById('words');
+var currentWord = 0;
 
-// Seleciona o elemento que exibirá as palavras
-var textElement = document.getElementById('text');
-
-// Variável que armazena o índice da palavra atual
-var currentWordIndex = 0;
-
-// Função que troca a palavra exibida
-function updateText() {
-  // Atualiza o texto do elemento
-  textElement.innerText = words[currentWordIndex];
-  
-  textElement.style.animation = 'typing 2s';
-
-  // Incrementa o índice da palavra atual
-  currentWordIndex = (currentWordIndex + 1) % words.length;
+function changeWord() {
+  var word = words[currentWord];
+  var i = 0;
+  function addLetter() {
+    element.innerHTML += word[i];
+    i++;
+    if (i < word.length) {
+      setTimeout(addLetter, 100); // pausa de 100 milissegundos entre cada letra
+    }
+  }
+  element.innerHTML = '';
+  addLetter();
+  currentWord++;
+  if (currentWord >= words.length) {
+    currentWord = 0;
+  }
 }
 
-// Executa a função pela primeira vez
-updateText();
-
-// Executa a função a cada 5 segundos
-setInterval(updateText, 5000);
+setInterval(changeWord, 5000);
 </script>
 </body>
 </html>
