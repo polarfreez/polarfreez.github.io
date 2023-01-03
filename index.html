@@ -150,11 +150,11 @@
       <img src="/images/profile.jpg" alt="Profile image" class="profile-image">
       <div class="profile-info">
         <h2>Braunx</h2>
-        <p>Full Stack Developer</p>
+        <div id="text"><p>.</p></div>
         <p>Blender Artist</p>
         <div class="links">
           <a href="https://github.com/braunxx"><img src="/images/github.svg" alt="GitHub logo">GitHub</a>
-          <a href="https://twitter.com/rafaaa2105"><img src="/images/twitter.svg" alt="Twitter logo">LinkedIn</a>
+          <a href="https://twitter.com/rafaaa2105"><img src="/images/twitter.svg" alt="Twitter logo">Twitter</a>
         </div>
       </div>
     </div>
@@ -162,5 +162,31 @@
       <p>Oi, meu nome é Braunx e sou um apaixonado por tecnologia e arte. Embora ainda esteja aprendendo e tenha muito a melhorar, gosto de trabalhar com códigos em linguagens como Python, C# e JavaScript e também tenho alguma experiência em criar sites. Além disso, adoro criar artes no Blender e também sou habilidoso em desenho à mão. Obrigado por visitar meu portfólio e espero que você goste do que vê. Estou sempre buscando maneiras de melhorar minhas habilidades e aprender coisas novas, então ficaria feliz em receber qualquer sugestão ou feedback de vocês.</p>
     </div>
   </div>
+  
+  <script>
+// Array de palavras que serão exibidas
+var words = ['palavra1', 'palavra2', 'palavra3', 'palavra4'];
+
+// Seleciona o elemento que exibirá as palavras
+var textElement = document.getElementById('text');
+
+// Variável que armazena o índice da palavra atual
+var currentWordIndex = 0;
+
+// Função que troca a palavra exibida
+function updateText() {
+  // Atualiza o texto do elemento
+  textElement.innerText = words[currentWordIndex];
+
+  // Incrementa o índice da palavra atual
+  currentWordIndex = (currentWordIndex + 1) % words.length;
+}
+
+// Executa a função pela primeira vez
+updateText();
+
+// Executa a função a cada 5 segundos
+setInterval(updateText, 5000);
+</script>
 </body>
 </html>
