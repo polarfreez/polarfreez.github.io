@@ -200,11 +200,22 @@ var cursor = document.getElementById('cursor');
 var isCursorVisible = true;
 
 function changeWord() {
-  element.innerHTML = words[currentWord] + '<span id="cursor">_</span>';
+  var word = words[currentWord];
+  var i = 0;
+  function addLetter() {
+    element.innerHTML += word[i];
+    i++;
+    if (i < word.length) {
+      setTimeout(addLetter, 100); // pausa de 100 milissegundos entre cada letra
+    }
+  }
+  element.innerHTML = '';
+  addLetter();
   currentWord++;
   if (currentWord >= words.length) {
     currentWord = 0;
   }
+}
   // Adicione uma pausa de 3 segundos antes de apagar a palavra
   setTimeout(function() {
     element.classList.add('fadeout');
