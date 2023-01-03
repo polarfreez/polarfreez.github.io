@@ -199,10 +199,12 @@ var currentWord = 0;
 
 var words = ['palavra 1', 'palavra 2', 'palavra 3'];
 var element = document.getElementById('words');
+var cursor = document.getElementById('cursor');
 var currentWord = 0;
+var isCursorVisible = true;
 
 function changeWord() {
-  element.innerHTML = words[currentWord];
+  element.innerHTML = words[currentWord] + '<span id="cursor">_</span>';
   currentWord++;
   if (currentWord >= words.length) {
     currentWord = 0;
@@ -218,8 +220,18 @@ element.addEventListener('animationend', function() {
   element.classList.remove('fadeout');
   changeWord();
 });
+    
+setInterval(function() {
+  if (isCursorVisible) {
+    cursor.style.visibility = 'hidden';
+  } else {
+    cursor.style.visibility = 'visible';
+  }
+  isCursorVisible = !isCursorVisible;
+}, 500);
 
-setInterval(changeWord, 5000); // chama a função a cada 5 segundos
+
+setInterval(changeWord, 10000); // chama a função a cada 5 segundos
 
 </script>
 </body>
