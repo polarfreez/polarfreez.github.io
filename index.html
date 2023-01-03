@@ -82,6 +82,18 @@
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+    
+    @keyframes typing {
+    from { width: 0; }
+  }
+  /* Estilo do elemento que exibe as palavras */
+  #text {
+    border-right: 2px solid #000;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: auto;
+  }
 
 .profile-info {
   display: flex;
@@ -177,6 +189,8 @@ var currentWordIndex = 0;
 function updateText() {
   // Atualiza o texto do elemento
   textElement.innerText = words[currentWordIndex];
+  
+  textElement.style.animation = 'typing 2s';
 
   // Incrementa o índice da palavra atual
   currentWordIndex = (currentWordIndex + 1) % words.length;
