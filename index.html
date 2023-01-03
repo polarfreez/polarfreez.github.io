@@ -163,7 +163,7 @@ opacity: 0;
   <img src="/images/profile.jpg" alt="Foto de perfil" class="profile-image">
   <div class="profile-info">
     <h2>Olá, eu sou o Braunx</h2>
-    <p>Sou um <span id="typing"></span><span class="cursor">_</span></p>
+    <p>Sou um <span id="typing"></span><span class="cursor">|</span></p>
     <div class="links">
       <a href="https://www.instagram.com/rafaaa2105/"><img src="https://via.placeholder.com/20x20" alt="Ícone do Instagram">@rafaaa2105</a>
       <a href="https://www.twitter.com/rafaaa2105"><img src="https://via.placeholder.com/20x20" alt="Ícone do Twitter">@Rafaaa2105</a>
@@ -195,7 +195,7 @@ function erase() {
   if (currentLetterIndex > 0) {
     document.getElementById("typing").innerHTML = currentWord.substring(0, currentLetterIndex - 1);
 currentLetterIndex--;
-setTimeout(erase, 200);
+setTimeout(erase, 50);
 } else {
 currentWordIndex++;
 if (currentWordIndex >= words.length) {
