@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Home - Braunx</title>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap" rel="stylesheet">
-  <style>
+  <head>
+    <meta charset="utf-8">
+    <title>Home - Braunx</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap"
+      rel="stylesheet">
+    <style>
     /* Add your CSS styles here */
-    body {
-      font-family: 'Prompt', Arial, sans-serif;
-      background: linear-gradient(to right, #0d1117, #1d232d);
-      color: #fff;
-    }
-.main-container {
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
+body {
+  font-family: 'Prompt', Arial, sans-serif;
+  background: rgb(13,17,23);
+background: linear-gradient(142deg, rgba(13,17,23,1) 0%, rgba(89,48,130,1) 100%);
 }
+
 
 .header {
 display: flex;
@@ -24,12 +22,13 @@ justify-content: space-between;
 margin-bottom: 20px;
 position: relative;
 overflow: hidden;
+background-color:#0d1117;
 }
 
 .header h1 {
 font-size: 2em;
 color: #5d5dff;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+/*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
 transition: all 0.3s;
 }
 
@@ -48,23 +47,13 @@ transition: all 0.3s;
 color: #8989ff;
 }
 
-.header::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(to right, #0d1117, #1d232d);
-z-index: -1;
-transform: skewX(-25deg);
-transform-origin: left;
-}
-
 .profile-container {
 display: flex;
 align-items: center;
 margin-bottom: 20px;
+max-width: 800px;
+margin: 0 auto;
+padding: 0px;
 }
 
 .profile-image {
@@ -185,31 +174,41 @@ border: none;
 }
 </style>
 
-</head>
-<body>
-  <div class="main-container">
-    <div class="header">
-      <h1>Braunx</h1>
-      <a href="#">Sobre mim</a>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <h1>Braunx</h1>
+        <a href="#">Sobre mim</a>
+      </div>
+      <div class="profile-container">
+        <img src="/images/profile.jpg" alt="Foto de perfil"
+          class="profile-image">
+        <div class="profile-info">
+          <h2>Olá, eu sou o Braunx</h2>
+          <p>Sou um <span id="typing"></span><span class="cursor">|</span></p>
+          <div class="links">
+            <a href="https://www.instagram.com/rafaaa2105/"><img
+                src="/images/instagram.svg" alt="Ícone do Instagram"><p>@rafaaa2105</p></a>
+            <a href="https://www.twitter.com/rafaaa2105"><img
+                src="/images/twitter.svg" alt="Ícone do Twitter"><p>@Rafaaa2105</p></a>
+            <a href="https://github.com/braunxx"><img src="/images/github.svg"
+                alt="Ícone do GitHub"><p>Braunxx</p></a>
+          </div>
+          <div class="about">
+            <p>Eu sou Braunx, um estudante apaixonado por tecnologia e arte.
+              Além de me dedicar aos estudos, também tenho habilidades em
+              programação, especialmente em Python, C#, JavaScript e HTML/CSS.
+              Além disso, tenho habilidades criativas e gosto de criar artes
+              tanto no Blender quanto à mão. Com uma combinação única de
+              interesses e habilidades, estou sempre buscando novas
+              oportunidades de aprendizado e crescimento.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn", onclick="location.href='/arts';";">Minhas Artes</button>
     </div>
-<div class="profile-container">
-  <img src="/images/profile.jpg" alt="Foto de perfil" class="profile-image">
-  <div class="profile-info">
-    <h2>Olá, eu sou o Braunx</h2>
-    <p>Sou um <span id="typing"></span><span class="cursor">|</span></p>
-    <div class="links">
-      <a href="https://www.instagram.com/rafaaa2105/"><img src="/images/instagram.svg" alt="Ícone do Instagram"><p>@rafaaa2105</p></a>
-      <a href="https://www.twitter.com/rafaaa2105"><img src="/images/twitter.svg" alt="Ícone do Twitter"><p>@Rafaaa2105</p></a>
-      <a href="https://github.com/braunxx"><img src="/images/github.svg" alt="Ícone do GitHub"><p>Braunxx</p></a>
-    </div>
-    <div class="about">
-      <p>Eu sou Braunx, um estudante apaixonado por tecnologia e arte. Além de me dedicar aos estudos, também tenho habilidades em programação, especialmente em Python, C#, JavaScript e HTML/CSS. Além disso, tenho habilidades criativas e gosto de criar artes tanto no Blender quanto à mão. Com uma combinação única de interesses e habilidades, estou sempre buscando novas oportunidades de aprendizado e crescimento.</p>
-    </div>
-  </div>
-</div>
-    <button class="btn", onclick="location.href='/arts';";">Minhas Artes</button>
-  </div>
-  <script>
+    <script>
     // Adicione o seu JavaScript aqui
     const words = ["Artista", "Desenvolvedor", "Criador de conteúdo", "Estudante"];
     let currentWordIndex = 0;
@@ -242,5 +241,5 @@ setTimeout(type, 2000);
 
 type();
   </script>
-</body>
+  </body>
 </html>
