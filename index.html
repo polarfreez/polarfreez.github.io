@@ -6,15 +6,35 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap"
       rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
     /* Add your CSS styles here */
 body {
   font-family: 'Prompt', Arial, sans-serif;
+  font-size: 20px;
 background: linear-gradient(to bottom right, rgba(13,17,23,1), rgba(89,48,130,1));
 min-height: 100vh;
 margin: 0;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-info {
+    width: 80%;
+  }
+
+  .btn {
+    padding: 20px 60px!important;
+    font-size: 20px!important;
+  }
+}
 
 .header {
 display: flex;
