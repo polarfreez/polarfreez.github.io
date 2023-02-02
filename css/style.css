@@ -1,81 +1,208 @@
-/* Add your CSS styles here */
 body {
-  font-family: sans-serif;
-  background-color: #333;
-  color: #fff;
+  font-family: 'Prompt', Arial, sans-serif;
+  font-size: 16px;
+background: linear-gradient(to bottom right, rgba(13,17,23,1), rgba(89,48,130,1));
+min-height: 100vh;
+margin: 0;
 }
 
-.main-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .links {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .links img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-info {
+    width: 80%;
+  }
+
+  .btn {
+    padding: 20px 60px!important;
+    font-size: 18px!important;
+    margin-bottom: 30px!important; 
+  }
+  
+  .cursor {
+  font-family: Arial, sans-serif;
+  }
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 20px;
+position: relative;
+overflow: hidden;
+margin-left: 20px;
+margin-right: 40px; 
 }
 
 .header h1 {
-  font-size: 2em;
-  color: #5d5dff;
+font-size: 2em;
+color: #5d5dff;
+/*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
+transition: all 0.3s;
+}
+
+.header h1:hover {
+color: #8989ff;
+text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header a {
-  text-decoration: none;
-  color: #5d5dff;
+text-decoration: none;
+color: #5d5dff;
+transition: all 0.3s;
 }
 
 .header a:hover {
-  color: #8989ff;
+color: #8989ff;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  padding: 20px;
+.profile-container {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+max-width: 800px;
+margin: 0 auto;
+padding: 0px;
 }
 
-.sidebar h2 {
-  margin-top: 0;
+.profile-image {
+width: 200px;
+height: 200px;
+border-radius: 100px;
+object-fit: cover;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transition: all 0.3s;
+margin-right: 20px;
 }
 
-.sidebar nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.profile-image:hover {
+transform: scale(1.1);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar nav li {
-  margin: 10px 0;
+.profile-info {
+display: flex;
+flex-direction: column;
 }
 
-.sidebar nav a {
-  display: block;
-  color: #333;
-  text-decoration: none;
+.profile-info h2 {
+font-size: 1.5em;
+margin-bottom: 10px;
+color: #5d5dff;
 }
 
-.sidebar nav a:hover {
-  color: #00b8d4;
+.profile-info p {
+font-size: 1em;
+color: #999;
+margin-bottom: 10px;
 }
 
-.intro {
-  padding: 20px;
+.profile-info a {text-decoration: none;
+color: #5d5dff;
+transition: all 0.3s;
 }
 
-.intro h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  color: #5d5dff;
+.profile-info a:hover {
+color: #8989ff;
 }
 
-.intro p {
-  font-size: 1em;
+.links {
+display: flex;
+align-items: center;
+margin-top: 10px;
+flex-wrap: wrap;
+}
+
+.links a {
+  display: flex;
+text-decoration: none;
+color: #999;
+margin-right: 10px;
+transition: all 0.3s;
+}
+    
+    .links p {
+    margin:auto;
+    }
+
+.links a:hover {
+color: #5d5dff;
+}
+
+.links img {
+width: 20px;
+height: 20px;
+margin-right: 5px;
+margin-top: 4px;
+}
+
+.cursor {
+display: inline-block;
+background: #999;
+width: 5px;
+height: 20px;
+animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+0% {
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
+    
+    .btn{
+      padding: 20px 60px;
+    font-size: 18px;
+margin: auto;
+margin-top: 30px;
+font-weight: 0;
+color: #fff;
+background: linear-gradient(to right, #0066CC 0%, #c500cc 100%);
+border: none;
+box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+border-radius: 50px;
+transition : 336ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+.btn:hover{
+
+transition : 336ms;
+padding: 20px 90px;
+transform : translateY(-0px);
+background: linear-gradient(69deg, #0066CC 0%, #c500cc 100%);
+color: #ffffff;
+border: none;
 }
