@@ -29,15 +29,14 @@ setTimeout(type, 2000);
 
 type();
 
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', function() {
-  if (window.scrollY > header.offsetHeight) {
-    header.classList.add('sticky');
+window.onscroll = function() {
+  var header = document.getElementByClassName("header");
+  if (window.pageYOffset > 50) {
+    header.style.backgroundColor = "white";
   } else {
-    header.classList.remove('sticky');
+    header.style.backgroundColor = "black";
   }
-});
+};
 
 
 
