@@ -30,7 +30,7 @@ setTimeout(type, 2000);
 type();
 
 window.onscroll = function() {
-  var header = document.getElementByClassName("header");
+  var header = document.getElementsByClassName("header");
   if (window.pageYOffset > 50) {
     header.style.backgroundColor = "white";
   } else {
