@@ -48,7 +48,7 @@ margin: 0;
 }
 
 .header {
-position: relative;
+position: sticky;
 transition: background-color 0.5s ease;
 display: flex;
 align-items: center;
@@ -62,7 +62,7 @@ margin-right: 40px;
 
 .header.sticky {
   background-color: lightgray;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
