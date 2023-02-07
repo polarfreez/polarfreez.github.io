@@ -47,6 +47,15 @@ margin: 0;
   }
 }
 
+#header {
+position: sticky;
+transition: background-color 0.5s ease;
+}
+
+#header .sticky {
+background-color: #261d4b;
+}
+
 .header {
 display: flex;
 align-items: center;
