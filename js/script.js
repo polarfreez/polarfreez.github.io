@@ -29,7 +29,7 @@ setTimeout(type, 2000);
 
 type();
 
-const header = document.querySelector('header');
+const header = document.querySelector('.header');
 
 window.addEventListener('scroll', function() {
   if (window.scrollY > header.offsetHeight) {
@@ -38,5 +38,6 @@ window.addEventListener('scroll', function() {
     header.classList.remove('sticky');
   }
 });
+
 
 
