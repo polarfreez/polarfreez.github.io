@@ -34,9 +34,9 @@ type();
 window.onscroll = function() {
   var header = document.getElementsByClassName("header");
   if (window.pageYOffset > 50) {
-    header[0].style.backgroundColor = "white";
+    header[0].style.backgroundColor = 'white';
   } else {
-    header[0].style.backgroundColor = "black";
+    header[0].style.backgroundColor = "#0d1017";
   }
 };
 
