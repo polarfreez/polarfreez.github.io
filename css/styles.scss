@@ -46,7 +46,7 @@
 }
 
 body {
-  font-family: 'Prompt', Arial, Helvetica, sans-serif
+  font-family: 'Prompt', Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,7 +124,6 @@ body {
   &::after {
     transform: rotate(-45deg);
   }
-}
 
 @keyframes fall {
   to {
