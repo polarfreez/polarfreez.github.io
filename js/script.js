@@ -1,7 +1,9 @@
-    const words = ["Artista", "Desenvolvedor", "Criador de conteúdo", "Estudante"];
-    let currentWordIndex = 0;
-    let currentLetterIndex = 0;
-    let currentWord = words[currentWordIndex];
+window.onload = function() {
+const words = ["Artista", "Desenvolvedor", "Criador de conteúdo", "Estudante"];
+let currentWordIndex = 0;
+let currentLetterIndex = 0;
+let currentWord = words[currentWordIndex];
+
 function type() {
   if (currentLetterIndex < currentWord.length) {
     document.getElementById("typing").innerHTML += currentWord[currentLetterIndex];
@@ -38,5 +40,5 @@ window.onscroll = function() {
   }
 };
 
-
+};
 
