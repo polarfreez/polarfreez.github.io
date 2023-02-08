@@ -32,9 +32,9 @@ type();
 window.onscroll = function() {
   var header = document.getElementsByClassName("header");
   if (window.pageYOffset > 50) {
-    header.style.background-color = "white";
+    header[0].style.backgroundColor = "white";
   } else {
-    header.style.background-color = "black";
+    header[0].style.backgroundColor = "black";
   }
 };
 
