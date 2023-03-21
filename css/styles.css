@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap');
 
+@font-face {
+  font-family: Aquire;
+  src: url(aquire.oft);
+}
+
 @media screen and (max-width: 768px) {
   body {
     font-size: 18px;
@@ -455,6 +460,7 @@ z-index: 10;
 .header h1 {
 font-size: 2em;
 color: #5d5dff;
+  font-family: Aquire, Arial, Helvetica, sans-serif;
 /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
 transition: all 0.3s;
 }
