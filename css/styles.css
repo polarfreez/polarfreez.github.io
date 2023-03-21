@@ -581,6 +581,7 @@ opacity: 0;
 }
     
     .btn{
+font-family: "Prompt", Arial, Helvetica, sans-serif;
       padding: 20px 60px;
     font-size: 18px;
 margin: auto;
