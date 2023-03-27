@@ -604,6 +604,10 @@ align-items: center;
 cursor: pointer;
 }
 
+.btn p {
+  padding-left: 20px;
+}
+
 .btn:hover{
 
 transition : 336ms;
