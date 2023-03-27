@@ -608,6 +608,11 @@ cursor: pointer;
   padding-left: 20px;
 }
 
+.btn img {
+  width: 18px;
+  height: auto;
+}
+
 .btn:hover{
 
 transition : 336ms;
