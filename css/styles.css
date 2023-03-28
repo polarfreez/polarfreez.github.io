@@ -616,7 +616,7 @@ cursor: pointer;
 .btn:hover{
 
 transition : 336ms;
-padding: 20px 90px;
+padding: 10px 35px;
 transform : translateY(-0px);
 background: linear-gradient(69deg, #0066CC 0%, #c500cc 100%);
 color: #ffffff;
