@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap');
 
-@font-face {
-  font-family: Aquire;
-  src: url(aquire.oft);
+@font-face { 
+  font-family: ‘Aquire’;
+  src: url(‘aquire.oft’);
 }
 
 @media screen and (max-width: 768px) {
