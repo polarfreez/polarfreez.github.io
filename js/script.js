@@ -24,6 +24,3 @@ window.onscroll = function() {
     header[0].style.backgroundColor = "rgba(0, 0, 0, 0)";
   }
 };
-
-};
-
