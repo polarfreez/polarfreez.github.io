@@ -1,35 +1,20 @@
-window.onload = function() {
-const words = ["Artista", "Desenvolvedor", "Criador de conteúdo", "Estudante"];
-let currentWordIndex = 0;
-let currentLetterIndex = 0;
-let currentWord = words[currentWordIndex];
-
-function type() {
-  if (currentLetterIndex < currentWord.length) {
-    document.getElementById("typing").innerHTML += currentWord[currentLetterIndex];
-    currentLetterIndex++;
-    setTimeout(type, 125);
-  } else {
-    setTimeout(erase, 2000);
-  }
+obfu_data = {
+    "delay":10,
+    "start_time":80,
+    "end_time":80,
+    "disp_time":2000,
+    "loop":false,
+    "obfu_chars":"123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@?#$%^&*()",
+    "phrases":[
+        'The system has encountered an unexpected error',
+        'Character "USER_IDENTIFY" is missing',
+        'Attempting to load from memory...',
+        'RUNTIME_ERROR',
+        'Excerpt from the Journal of [DATA EXPUNGED], Overseer of the SCP Foundation'
+  ]
 }
 
-function erase() {
-  if (currentLetterIndex > 0) {
-    document.getElementById("typing").innerHTML = currentWord.substring(0, currentLetterIndex - 1);
-currentLetterIndex--;
-setTimeout(erase, 50);
-} else {
-currentWordIndex++;
-if (currentWordIndex >= words.length) {
-currentWordIndex = 0;
-}
-currentWord = words[currentWordIndex];
-setTimeout(type, 2000);
-}
-}
 
-type();
 
 window.onscroll = function() {
   var header = document.getElementsByClassName("header");
