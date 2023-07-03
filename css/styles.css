@@ -38,10 +38,6 @@
     font-size: 18px!important;
     margin-bottom: 30px!important; 
   }
-  
-  .cursor {
-  font-family: Arial, sans-serif;
-  }
 }
 
 @mixin sp-layout {
@@ -564,25 +560,7 @@ margin-right: 5px;
 margin-top: 4px;
 }
 
-.cursor {
-display: inline-block;
-background: #999;
-width: 5px;
-height: 20px;
-animation: cursor-blink 1s infinite;
-}
 
-@keyframes cursor-blink {
-0% {
-opacity: 0;
-}
-50% {
-opacity: 1;
-}
-100% {
-opacity: 0;
-}
-}
     
     .btn{
 font-family: "Prompt", Arial, Helvetica, sans-serif;
