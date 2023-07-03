@@ -66,7 +66,7 @@ class TextScramble {
   }
 }
 
-const el = document.querySelector('.text')
+const el = document.querySelector('#typing')
 const fx = new TextScramble(el)
 
 let counter = 0
