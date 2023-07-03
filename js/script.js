@@ -6,11 +6,11 @@ obfu_data = {
     "loop":false,
     "obfu_chars":"123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@?#$%^&*()",
     "phrases":[
-        'The system has encountered an unexpected error',
-        'Character "USER_IDENTIFY" is missing',
-        'Attempting to load from memory...',
-        'RUNTIME_ERROR',
-        'Excerpt from the Journal of [DATA EXPUNGED], Overseer of the SCP Foundation'
+        'Entusiasta do espaço e do universo',
+        'Entusiasta da tecnologia',
+        'Estudante',
+        'Artista',
+        'Desenvolvedor'
   ]
 }
 
