@@ -6,11 +6,11 @@ obfu_data = {
     "loop":true,
     "obfu_chars":"123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@?#$%^&*()",
     "phrases":[
-        'Apaixonado pelo espaço e pelo universo',
-        'Entusiasta da tecnologia',
-        'Estudante',
-        'Artista',
-        'Desenvolvedor'
+        'apaixonado pelo espaço e pelo universo',
+        'entusiasta da tecnologia',
+        'estudante',
+        'artista',
+        'desenvolvedor'
   ]
 }
 
