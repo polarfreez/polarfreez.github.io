@@ -3,7 +3,7 @@ obfu_data = {
     "start_time":80,
     "end_time":80,
     "disp_time":2000,
-    "loop":false,
+    "loop":true,
     "obfu_chars":"123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!@?#$%^&*()",
     "phrases":[
         'Entusiasta do espaço e do universo',
