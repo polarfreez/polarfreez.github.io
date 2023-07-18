@@ -2,10 +2,10 @@ let sign = document.querySelector('.neonSign');
 setInterval(() => {
     if (sign.classList.contains('on')) {
         sign.classList.remove('on');
-        sign.innerHTML = 'OFF';
+        sign.innerHTML = 'desenvolvedor';
     } else {
         sign.classList.add('on');
-        sign.innerHTML = 'ON';
+        sign.innerHTML = 'artista';
     }
 }, 2000);
 
