@@ -1,16 +1,13 @@
-    let signOn = false;
-    setInterval(toggleSign, 2000);
-    function toggleSign() {
-        const sign = document.getElementById('sign');
-        if (signOn) {
-            sign.textContent = 'artist';
-            sign.classList.remove('flicker');
-        } else {
-            sign.textContent = 'desenvolvedor';
-            sign.classList.add('flicker');
-        }
-        signOn = !signOn;
+let sign = document.querySelector('.neonSign');
+setInterval(() => {
+    if (sign.classList.contains('on')) {
+        sign.classList.remove('on');
+        sign.innerHTML = 'OFF';
+    } else {
+        sign.classList.add('on');
+        sign.innerHTML = 'ON';
     }
+}, 2000);
 
 window.onscroll = function() {
   var header = document.getElementsByClassName("header");
