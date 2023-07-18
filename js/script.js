@@ -3,10 +3,10 @@
     function toggleSign() {
         const sign = document.getElementById('sign');
         if (signOn) {
-            sign.textContent = 'OFF';
+            sign.textContent = 'artist';
             sign.classList.remove('flicker');
         } else {
-            sign.textContent = 'ON';
+            sign.textContent = 'desenvolvedor';
             sign.classList.add('flicker');
         }
         signOn = !signOn;
