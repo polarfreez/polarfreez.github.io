@@ -1,3 +1,17 @@
+    let signOn = false;
+    setInterval(toggleSign, 2000);
+    function toggleSign() {
+        const sign = document.getElementById('sign');
+        if (signOn) {
+            sign.textContent = 'OFF';
+            sign.classList.remove('flicker');
+        } else {
+            sign.textContent = 'ON';
+            sign.classList.add('flicker');
+        }
+        signOn = !signOn;
+    }
+
 window.onscroll = function() {
   var header = document.getElementsByClassName("header");
   if (window.pageYOffset > 50) {
