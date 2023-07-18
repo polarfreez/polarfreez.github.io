@@ -654,22 +654,22 @@ border: none;
   box-shadow: inset 0 0 10px white, 0
 }
 
-.letreiro {
-  font-size: 50px;
-  font-weight: bold;
-  color: red;
-  text-align: center;
-  animation: blink 2s infinite;
-}
+  .neon {
+    font-family: "Arial Black", sans-serif;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    animation: flicker 3s infinite alternate;
+  }
 
-@keyframes blink {
-  0% { opacity: 1; }
-  25% { opacity: 0; }
-  50% { opacity: 1; }
-  75% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-.letreiro[data-letreiro="Falhando"] {
-  color: blue;
-}
+  @keyframes flicker {
+    from {
+      opacity: 1;
+      text-shadow: inherit;
+    }
+    to {
+      opacity: 0.2;
+      text-shadow: none;
+      content: "desenvolvedor";
+    }
+  }
