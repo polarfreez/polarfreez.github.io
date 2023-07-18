@@ -56,6 +56,7 @@ body {
   justify-content: center;
   min-height: 97.8vh;
   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  margin: auto;
 }
 
 .stars {
@@ -451,6 +452,7 @@ overflow: hidden;
 padding-left: 20px;
 padding-right: 40px;
 z-index: 10;
+  margin-top: -2px;
 }
 
 .header.sticky {
@@ -623,6 +625,7 @@ border: none;
   line-height: 60px;
   /* Adicione uma transição suave ao elemento */
   transition: all 0.3s;
+  z-index: 1;
 }
 
 /* Estilize o elemento com a classe "fab-text" */
