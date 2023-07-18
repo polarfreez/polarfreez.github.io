@@ -654,23 +654,25 @@ border: none;
   box-shadow: inset 0 0 10px white, 0
 }
 
-    .neon {
-        font-size: 50px;
-        color: #fff;
-        text-shadow:
-            0 0 5px #fff,
-            0 0 10px #fff,
-            0 0 20px #fff,
-            0 0 40px #ff00de,
-            0 0 80px #ff00de,
-            0 0 90px #ff00de,
-            0 0 100px #ff00de,
-            0 0 150px #ff00de;
-    }
-    .flicker {
-        animation: flickerAnimation .2s infinite alternate;
-    }
-    @keyframes flickerAnimation {
-        from { opacity: .8; }
-        to { opacity: .2; }
-    }
+@keyframes flickerAnimation {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.neonSign {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  color: #fff;
+  text-shadow:
+    -1px -1px 0 #ff00de,
+    1px -1px 0 #ff00de,
+    -1px 1px 0 #ff00de,
+    1px 1px 0 #ff00de;
+}
+
+.neonSign.on {
+    animation-name: flickerAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
