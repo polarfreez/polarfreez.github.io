@@ -780,3 +780,7 @@ body {
 .sou {
   display: flex;
 }
+
+.sou p {
+  color: #fff;
+}
