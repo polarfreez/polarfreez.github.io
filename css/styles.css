@@ -670,6 +670,6 @@ border: none;
   100% { opacity: 1; }
 }
 
-.text[data-letreiro="Falhando"] {
+.letreiro[data-letreiro="Falhando"] {
   color: blue;
 }
