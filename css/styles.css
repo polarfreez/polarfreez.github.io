@@ -718,7 +718,7 @@ body {
 }
 
 .neon {
-  color: #fff;
+  color: #fff !important;
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
@@ -727,11 +727,11 @@ body {
     0 0 80px #0ff,
     0 0 90px #0ff,
     0 0 100px #0ff,
-    0 0 150px #0ff;
+    0 0 150px #0ff !important;
 }
 
 .off {
-  color: #333;
+  color: #333 !important;
   text-shadow: none;
 }
 
@@ -779,8 +779,4 @@ body {
 
 .sou {
   display: flex;
-}
-
-.sou p {
-  color: #fff;
 }
