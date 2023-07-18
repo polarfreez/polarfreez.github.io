@@ -654,7 +654,7 @@ border: none;
   box-shadow: inset 0 0 10px white, 0
 }
 
-.text {
+.letreiro {
   font-size: 50px;
   font-weight: bold;
   color: red;
@@ -670,6 +670,6 @@ border: none;
   100% { opacity: 1; }
 }
 
-.text[data-text="Falhando"] {
+.text[data-letreiro="Falhando"] {
   color: blue;
 }
