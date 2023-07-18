@@ -718,7 +718,6 @@ body {
 }
 
 .neon {
-  font-size: 3em;
   color: #fff;
   text-shadow:
     0 0 5px #fff,
@@ -776,4 +775,8 @@ body {
   to {
     opacity: .6;
   }
+}
+
+.sou {
+  display: flex;
 }
