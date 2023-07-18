@@ -600,3 +600,52 @@ background: linear-gradient(69deg, #0066CC 0%, #c500cc 100%);
 color: #ffffff;
 border: none;
 }
+
+
+/* Estilize o elemento com a classe "fab" */
+.fab {
+  /* Posicione o elemento no canto inferior direito da tela */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* Dê ao elemento uma forma circular */
+  border-radius: 50%;
+  /* Adicione uma sombra mais suave ao elemento */
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+  /* Defina a largura e a altura do elemento */
+  width: 60px;
+  height: 60px;
+  /* Defina a cor de fundo e a cor do texto do elemento para preto e branco */
+  background-color: black;
+  color: white;
+  /* Alinhe o texto e o ícone do elemento no centro */
+  text-align: center;
+  line-height: 60px;
+  /* Adicione uma transição suave ao elemento */
+  transition: all 0.3s;
+}
+
+/* Estilize o elemento com a classe "fab-text" */
+.fab-text {
+  /* Esconda o texto do botão por padrão */
+  display: none;
+}
+
+/* Estilize o elemento com a classe "fab-icon" */
+.fab-icon {
+  /* Defina a largura e a altura do ícone */
+  width: 30px;
+  height: 30px;
+  /* Posicione o ícone no centro do botão */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilize o elemento com a classe "fab:hover" */
+.fab:hover {
+  /* Aumente o tamanho do botão quando ele for passado pelo mouse */
+  transform: scale(1.2);
+  /* Adicione um efeito de brilho ao elemento */
+  box-shadow: inset 0 0 10px white, 0
