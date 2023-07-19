@@ -719,7 +719,7 @@ body {
 }
 
 .neon {
-  margin-inline: 6px;
+  margin-inline: 6px !important;
   color: #fff !important;
   text-shadow:
     0 0 5px #fff,
