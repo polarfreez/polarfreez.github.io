@@ -1266,3 +1266,11 @@ p.hero.glitch.layers {
   padding-top: 4px;
   padding-inline: 6px;
 }
+
+.artista {
+  display:flex;
+}
+
+.dev {
+  display:flex;
+}
