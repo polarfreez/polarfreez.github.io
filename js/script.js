@@ -11,12 +11,12 @@ setInterval(() => {
       neon.classList.remove('flicker-2');
       neon.classList.remove('flicker-3');
       neon.classList.add('off');
-      neon.textContent = " desenvolvedor";
+      neon.textContent = 'artista';
       isOn = false;
     }, 1500);
   } else {
     neon.classList.remove('off');
-    neon.textContent = ' artista';
+    neon.textContent = 'artista';
     isOn = true;
   }
 }, 4000);
