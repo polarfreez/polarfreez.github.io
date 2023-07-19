@@ -1263,7 +1263,6 @@ body {
 }
 
 p.hero.glitch.layers {
-  padding-top: 4px;
   padding-inline: 6px;
 }
 
@@ -1273,4 +1272,5 @@ p.hero.glitch.layers {
 
 .dev {
   display:flex;
+  align-items: center;
 }
