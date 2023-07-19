@@ -580,7 +580,7 @@ body {
   color: #5d5dff;
 }
 
-.profile-info p:not(.hero):not(.neon) {
+.profile-info p:not(.artista):not(.dev) {
   font-size: 1em;
   color: #999;
   margin-bottom: 10px;
