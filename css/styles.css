@@ -580,7 +580,7 @@ body {
   color: #5d5dff;
 }
 
-.profile-info p {
+.profile-info p:not(.hero):not(.neon) {
   font-size: 1em;
   color: #999;
   margin-bottom: 10px;
@@ -1261,4 +1261,9 @@ body {
 .hero.glitch::after {
   animation: paths 5s step-end infinite, opacity 5s step-end infinite,
     font 7s step-end infinite, movement 8s step-end infinite;
+}
+
+p.hero.glitch.layers {
+  padding-top: 4px;
+  padding-inline: 6px;
 }
