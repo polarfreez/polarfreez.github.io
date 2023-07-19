@@ -779,13 +779,12 @@ body {
   }
 }
 
-.sou {
-  display: flex;
+.sou p {
+  margin: 0;
 }
 
 .sou.hero p {
   font-family: 'IBM Plex Mono', monospace;
-  margin: 0;
 }
 
 .hero a {
