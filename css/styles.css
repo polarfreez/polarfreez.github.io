@@ -47,10 +47,6 @@
   }
 }
 
-.icon {
-  filter: invert(1);
-}
-
 body {
   font-family: "Prompt", Arial, Helvetica, sans-serif;
   display: flex;
