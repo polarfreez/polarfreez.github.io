@@ -719,7 +719,7 @@ body {
 }
 
 .neon {
-  margin-inline: 6px !important;
+  padding-inline: 6px !important;
   color: #fff !important;
   text-shadow:
     0 0 5px #fff,
@@ -1264,6 +1264,7 @@ body {
 
 p.hero.glitch.layers {
   padding-inline: 6px;
+  color: #5d5dff;
 }
 
 .artista {
