@@ -842,7 +842,6 @@ p.hero.glitch.layers {
   cursor: pointer;
   position: absolute;
   z-index: 1000;
-  width: 80%;
   right: 30px;
   top: 40px;
   backdrop-filter: blur(5px);
