@@ -33,7 +33,13 @@ window.onscroll = function () {
 function closePopUp() {
   var popUps = document.querySelectorAll('[role="alert"]');
   popUps.forEach(function(popUp) {
-    popUp.remove();
+    // Add a class to trigger the fade out
+    popUp.classList.add('fade-out');
+
+    // Wait for the transition to finish then remove the element
+    popUp.addEventListener('transitionend', function() {
+      popUp.remove();
+    });
   });
 }
 
