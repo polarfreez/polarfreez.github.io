@@ -29,3 +29,8 @@ window.onscroll = function () {
     header[0].style.backgroundColor = "rgba(0, 0, 0, 0)";
   }
 };
+
+function closePopUp() {
+  var popUp = document.querySelectorAll('[role="presentation"]');
+  remove(popUp);
+}
