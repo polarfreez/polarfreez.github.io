@@ -859,3 +859,9 @@ p.hero.glitch.layers {
   color: #0bd2ff;
   text-shadow: none;
 }
+
+.fade-out {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
