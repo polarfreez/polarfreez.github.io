@@ -1,6 +1,6 @@
 let neon = document.querySelector('.neon');
 let isOn = true;
-let popUpEnabled = true;
+let enablePopUp = true;
 
 setInterval(() => {
   if (isOn) {
@@ -31,7 +31,7 @@ window.onscroll = function () {
   }
 };
 
-if (popUpEnbable == true) {
+if (enablePopUp == true) {
   function closePopUp() {
     var popUps = document.querySelectorAll('[role="alert"]');
     popUps.forEach(function(popUp) {
