@@ -31,6 +31,9 @@ window.onscroll = function () {
 };
 
 function closePopUp() {
-  var popUp = document.querySelectorAll('[role="presentation"]');
-  remove(popUp);
+  var popUps = document.querySelectorAll('[role="alert"]');
+  popUps.forEach(function(popUp) {
+    popUp.remove();
+  });
 }
+
