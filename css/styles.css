@@ -840,7 +840,7 @@ p.hero.glitch.layers {
   text-shadow: 2px 1px #00040a;
   transition: 0.5s;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   right: 30px;
   top: 40px;
