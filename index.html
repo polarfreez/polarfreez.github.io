@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Portfolio</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.min.css">
+  <link rel="stylesheet" href="https://rawgit.com/jonom/jquery-focuspoint/master/css/focuspoint.css">
+  <link rel="stylesheet" href="github-dark.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400&display=swap');
+
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css);
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: ease-in-out;
+    }
+
+    .header {
+      position: fixed;
+      top: 0px;
+      z-index: 100;
+      margin-bottom: 116px;
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+      text-shadow: 0px 0px 100px rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+      background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+      font-family: "Prompt", Arial, Helvetica, sans-serif;
+      color: white;
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      position: sticky;
+      top: 0px;
+      z-index: 10;
+    }
+
+    .navbar-logo {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-left: 20px;
+    }
+
+    .navbar-menu {
+      display: flex;
+      list-style: none;
+      margin-right: 20px;
+    }
+
+    .navbar-menu li {
+      margin: 0 10px;
+    }
+
+    .navbar-menu li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    #navbar-link {
+      position: relative;
+    }
+
+    #navbar-link::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: white;
+      top: 21px;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+
+    #navbar-link:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+
+    .navbar-colored {
+      background-color: rgb(13, 16, 23);
+    }
+
+    .navbar-transparent {
+      background-color: #ffffff00;
+    }
+
+    .hero {
+      height: 600px;
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: URL("background.jpeg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: white;
+      text-shadow: 0px 0px 100px rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .scroll-down {
+      opacity: 1;
+      -webkit-transition: all .5s ease-in 3s;
+      transition: all .5s ease-in 3s;
+    }
+
+    .scroll-down {
+      bottom: 30px;
+      left: 0%;
+      margin-left: -16px;
+      display: block;
+      width: 32px;
+      height: 32px;
+      border: 2px solid #FFF;
+      background-size: 14px auto;
+      border-radius: 50%;
+      z-index: 2;
+      -webkit-animation: bounce 2s infinite 2s;
+      animation: bounce 2s infinite 2s;
+      -webkit-transition: all .2s ease-in;
+      transition: all .2s ease-in;
+      transform: scale(1);
+      position: relative;
+      top: 150px;
+    }
+
+    .scroll-down:before {
+      position: absolute;
+      top: calc(50% - 9.5px);
+      left: 26.4%;
+      transform: rotate(-45deg);
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      border: 2px solid white;
+      border-width: 0px 0 2px 2px;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100%,
+      20%,
+      50%,
+      80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+      }
+
+      40% {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+      }
+
+      60% {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px);
+      }
+    }
+
+    .section {
+      padding: 60px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .profile-info {
+      max-width: 600px;
+    }
+
+    .profile-info h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .profile-info p {
+      font-size: 18px;
+      line-height: 1.5;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .code {
+      max-width: 1200px;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .code pre {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 16px;
+      border: 2px solid #1b1c23;
+      background-color: #0d1117;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+      }
+
+      .profile {
+        flex-direction: column;
+      }
+
+      .profile-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      @keyframes bounce {
+
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+          -webkit-transform: translateY(0) scale(1.5);
+          -ms-transform: translateY(0) scale(1.5);
+          transform: translateY(0) scale(1.5);
+        }
+
+        40% {
+          -webkit-transform: translateY(-15px) scale(1.5);
+          -ms-transform: translateY(-15px) scale(1.5);
+          transform: translateY(-15px) scale(1.5);
+        }
+
+        60% {
+          -webkit-transform: translateY(-10px) scale(1.5);
+          -ms-transform: translateY(-10px) scale(1.5);
+          transform: translateY(-10px) scale(1.5);
+        }
+      }
+
+      .scroll-down {
+        transform: scale(1.5);
+      }
+    }
+
+    .contact-button::before,
+    .contact-button::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform-origin: 100% 50%;
+      height: 1px;
+      width: 11px;
+      background-color: #333;
+      border-radius: 2px;
+      will-change: transform;
+      transition: .3s;
+    }
+
+    .contact-button::before {
+      transform: translateY(-50%) rotate(30deg);
+    }
+
+    .contact-button::after {
+      transform: translateY(-50%) rotate(-30deg);
+    }
+
+    .contact-button:hover::before {
+      transform: translate(5px, -50%) rotate(30deg);
+    }
+
+    .contact-button:hover::after {
+      transform: translate(5px, -50%) rotate(-30deg);
+    }
+
+
+    .fullscreen,
+    .fotorama--fullscreen,
+    .fotorama--fullscreen .fotorama__stage,
+    .fotorama--fullscreen .fotorama__nav,
+    .fotorama-overlay {
+      background-color: #0505056f;
+    }
+
+    .thumbs>.fotorama {
+      overflow: visible;
+    }
+
+    /* style thumbs a bit */
+    .thumbs a {
+      text-decoration: none;
+      display: inline !important;
+      color: #34457b;
+    }
+
+    .thumbs a:hover {
+      color: #af1d05;
+    }
+
+    .thumbs a.switch {
+      border-bottom: 1px dashed;
+    }
+
+    .thumbs img {
+      width: auto;
+      height: 300px;
+      border: 2px transparent solid;
+      margin-left: -2px;
+      transition: border 0.2s ease-in-out;
+    }
+
+    .thumbs a:hover img {
+      border-color: #00afea;
+    }
+
+    /* straight “close” icon instead of “cancel fullscreen” */
+    .fotorama--fullscreen .fotorama__fullscreen-icon {
+      background-position: -64px 0;
+    }
+
+    .fotorama {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: ease;
+    }
+
+    .fotorama a {
+      flex-basis: calc(25% - 10px);
+    }
+
+    @media (max-width: 600px) {
+      .fotorama a {
+        flex-basis: 100%;
+        /* faz com que cada imagem ocupe uma linha inteira em telas pequenas */
+      }
+
+      .thumbs img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="navbar" id="navbar">
+        <img src="logo.png" alt="Logo" class="navbar-logo">
+        <ul class="navbar-menu">
+          <li><a href="#home" id="navbar-link">Home</a></li>
+          <li><a href="#code" id="navbar-link">Code</a></li>
+          <li><a href="#arts" id="navbar-link">Arts</a></li>
+          <li><a href="#about" id="navbar-link">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Bem-Vindo ao meu portifólio</h1>
+        <p>Eu sou um desenvolvedor e um artista que ama criar coisas incríveis.</p>
+        <a href="#" class="scroll-down" address="true"></a>
+      </div>
+    </div>
+    <div class="section" id="about">
+      <div class="section-title">Sobre mim</div>
+      <div class="profile">
+        <img src="profile.jpg" alt="Profile" class="profile-image">
+        <div class="profile-info">
+          <h2>Olá, eu sou AlphaZeRO</h2>
+          <p>Eu sou AlphaZero, um estudante apaixonado por tecnologia e arte. Tenho habilidades em programação web,
+            usando HTML/CSS e JavaScript. Um dos meus projetos mais recentes foi criar um site pessoal usando essas
+            ferramentas. Além de programar, eu também gosto de criar artes no Blender e à mão. Sou fascinado pela
+            combinação de criatividade e lógica. Nas horas vagas, eu adoro jogar videogames e assistir filmes e séries
+            de ficção científica.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="code">
+      <div class="section-title">Cooode</div>
+      <div class="code">
+        <pre><code class="hljs">// Um simples programa Hello World em C#
+          using System; // Importa o namespace System
+          
+          class Program // Define uma classe
+          {
+              static void Main(string[] args) // Define o método principal
+              {
+                  Console.WriteLine("Olá Mundo!"); // Escreve uma mensagem no console
+              }
+          }
+          </code></pre>
+      </div>
+    </div>
+    <div class="section" id="arts">
+      <div class="section-title">Minhas artes</div>
+      <div class="thumbs">
+        <!-- Fotorama, `data-auto="false"` is important -->
+        <div class="fotorama" data-auto="false" data-allow-full-screen="true" data-thumb-width="70"
+          data-thumb-height="47" data-nav="thumbs">
+          <a href="./images/image1.jpg"><img src="./images/image1.jpg"></a>
+          <a href="./images/image2.jpg"><img src="./images/image2.jpg"></a>
+          <a href="./images/image3.jpg"><img src="./images/image3.jpg"></a>
+          <a href="./images/image4.jpg"><img src="./images/image4.jpg"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+
+    $(function () {
+      $('.scroll-down').click(function () {
+        $('html, body').animate({ scrollTop: $('#about').offset().top }, 'slow');
+        return false;
+      });
+    });
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 10) {
+          $(".header").css("background", "rgb(13, 16, 23)");
+        }
+
+        else {
+          $(".header").css("background", "transparent");
+        }
+      })
+    })
+
+    $(function () {
+
+      // overlay for smoother fullscreen enter
+      var $overlay = $('<div class="fotorama-overlay"></div>')
+        .css({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
+        .animate()
+        .fadeTo(0, 0)
+        .hide()
+        .appendTo('body');
+
+      // take all .fotorama blocks
+      $('.thumbs').each(function () {
+        var $thumbs = $(this),
+
+          // clone it and make fotorama
+          $fotorama = $('.fotorama', $thumbs)
+            .clone()
+            //.show()
+            .animate()
+            .css({ position: 'absolute', left: -99999, top: -99999 })
+            .appendTo('body')
+            .fadeTo(0, 0)
+            .fotorama(),
+          fotorama = $fotorama.data('fotorama');
+
+        for (var _i = 0, _l = fotorama.data.length; _i < _l; _i++) {
+          // prepare id to use in fotorama.show()
+          fotorama.data[_i].id = fotorama.data[_i].img;
+        }
+
+        // bind clicks
+        $thumbs.on('click', 'a', function (e) {
+          e.preventDefault();
+
+          var $this = $(this);
+
+          $overlay
+            .show()
+            .stop()
+            .fadeTo(150, 1, function () {
+              $fotorama.stop().fadeTo(150, 1);
+
+              // API calls
+              fotorama
+                // show needed frame
+                .show({ index: $this.attr('href'), time: 0 })
+                // open fullscreen
+                .requestFullScreen();
+            })
+            .animate();
+        });
+
+        $fotorama.on('fotorama:fullscreenexit', function () {
+          $fotorama.stop().fadeTo(0, 0);
+          $overlay.stop().fadeTo(300, 0, function () {
+            $overlay.hide();
+          });
+        });
+      });
+
+    });
+  </script>
+</body>
+
+</html>
