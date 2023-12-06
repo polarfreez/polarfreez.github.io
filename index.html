@@ -640,68 +640,71 @@ class Program // Define uma classe
       })
     })
 
-    $(function () {
+$(function () {
 
-      // overlay for smoother fullscreen enter
-     var $overlay = $('<div class="fotorama-overlay"></div>')
-    .css({ position: 'relative', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
-    .animate()
-    .fadeTo(0, 0)
-    .hide()
-    .appendTo('body');
+  // overlay for smoother fullscreen enter
+  var $overlay = $('<div class="fotorama-overlay"></div>')
+.css({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
+.animate()
+.fadeTo(0, 0)
+.hide()
+.appendTo('body');
 
 // take all .fotorama blocks
 $('.thumbs').each(function () {
-  var $thumbs = $(this),
+var $thumbs = $(this),
 
-    // clone it and make fotorama
-    $fotorama = $('.fotorama', $thumbs)
-      .clone()
-      .animate()
-      .css({ position: 'relative' })
-      .appendTo('body')
-      .fadeTo(0, 0)
-      .fotorama(),
-    fotorama = $fotorama.data('fotorama');
+  // clone it and make fotorama
+  $fotorama = $('.fotorama', $thumbs)
+    .clone()
+    //.show()
+    .animate()
+    .css({ position: 'absolute' })
+    .appendTo('body')
+    .fadeTo(0, 0)
+    .fotorama(),
+  fotorama = $fotorama.data('fotorama');
 
-  for (var _i = 0, _l = fotorama.data.length; _i < _l; _i++) {
-    // prepare id to use in fotorama.show()
-    fotorama.data[_i].id = fotorama.data[_i].img;
-  }
+for (var _i = 0, _l = fotorama.data.length; _i < _l; _i++) {
+  // prepare id to use in fotorama.show()
+  fotorama.data[_i].id = fotorama.data[_i].img;
+}
 
-  // bind clicks
-  $thumbs.on('click', 'a', function (e) {
-    e.preventDefault();
+// bind clicks
+$thumbs.on('click', 'a', function (e) {
+  e.preventDefault();
 
-    var $this = $(this);
+  var $this = $(this);
 
-    $overlay
-      .show()
-      .stop()
-      .fadeTo(150, 1, function () {
-        $fotorama.stop().fadeTo(150, 1);
+  // get the current scroll position
+  var scrollPos = $(window).scrollTop();
 
-        // API calls
-        fotorama
-          // show needed frame
-          .show({ index: $this.attr('href'), time: 0 })
-          // open fullscreen
-          .requestFullScreen();
-      })
-      .animate();
-  });
+  $overlay
+    .show()
+    .stop()
+    .fadeTo(150, 1, function () {
+      $fotorama.stop().fadeTo(150, 1);
 
-  $fotorama.on('fotorama:fullscreenexit', function () {
-    $fotorama.stop().fadeTo(0, 0);
-    $overlay.stop().fadeTo(300, 0, function () {
-      $overlay.hide();
-    });
-  });
+      // API calls
+      fotorama
+        // show needed frame
+        .show({ index: $this.attr('href'), time: 0 })
+        // open fullscreen
+        .requestFullScreen();
+    })
+    .animate();
+
+  // scroll back to the previous position
+  $(window).scrollTop(scrollPos);
 });
 
-      });
-
-    });
+$fotorama.on('fotorama:fullscreenexit', function () {
+  $fotorama.stop().fadeTo(0, 0);
+  $overlay.stop().fadeTo(300, 0, function () {
+    $overlay.hide();
+  });
+});
+}); });
   </script>
 </body>
 
