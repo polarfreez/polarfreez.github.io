@@ -172,8 +172,8 @@
 
     .scroll-down:before {
       position: absolute;
-      top: calc(50% - 8.3px);
-      left: 27.5%;
+      top: calc(50% - 9px);
+      left: 29%;
       transform: rotate(-45deg);
       display: block;
       width: 12px;
@@ -329,7 +329,7 @@
 
       .scroll-down:before {
         top: calc(50% - 9px);
-        left: 27.5%;
+        left: 29%;
       }
     }
 
