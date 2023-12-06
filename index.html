@@ -557,15 +557,17 @@ footer {
       <div class="section-title">Cooode</div>
       <div class="code">
         <pre><code class="hljs">// Um simples programa Hello World em C#
-          using System; // Importa o namespace System
-          
-          class Program // Define uma classe
-          {
-              static void Main(string[] args) // Define o método principal
-              {
-                  Console.WriteLine("Olá Mundo!"); // Escreve uma mensagem no console
-              }
-          }
+using System; // Importa o namespace System
+using System.Text;
+
+class Program // Define uma classe
+{
+    static void Main(string[] args) // Define o método principal
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        Console.WriteLine("Olá Mundo!"); // Escreve uma mensagem no console
+    }
+}
           </code></pre>
       </div>
     </div>
