@@ -22,17 +22,15 @@
 $(function () {
 
   // overlay for smoother fullscreen enter
-  var $overlay = $('<div class="fotorama-overlay"></div>')
+var $overlay = $('<div class="fotorama-overlay"></div>')
 .css({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
 .animate()
 .fadeTo(0, 0)
 .hide()
 .appendTo('body');
-
 // take all .fotorama blocks
 $('.thumbs').each(function () {
 var $thumbs = $(this),
-
   // clone it and make fotorama
   $fotorama = $('.fotorama', $thumbs)
     .clone()
