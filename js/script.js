@@ -23,7 +23,7 @@ $(function () {
 
   // overlay for smoother fullscreen enter
 var $overlay = $('<div class="fotorama-overlay"></div>')
-.css({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
+.css({ position: 'fixed', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
 .animate()
 .fadeTo(0, 0)
 .hide()
@@ -36,7 +36,7 @@ var $thumbs = $(this),
     .clone()
     //.show()
     .animate()
-    .css({ position: 'absolute' })
+    .css({ position: 'fixed' })
     .appendTo('body')
     .fadeTo(0, 0)
     .fotorama(),
