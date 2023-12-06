@@ -23,66 +23,58 @@ $(function () {
 
   // overlay for smoother fullscreen enter
   var $overlay = $('<div class="fotorama-overlay"></div>')
-    .css({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
+.css({ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 10001 })
+.animate()
+.fadeTo(0, 0)
+.hide()
+.appendTo('body');
+
+// take all .fotorama blocks
+$('.thumbs').each(function () {
+var $thumbs = $(this),
+
+  // clone it and make fotorama
+  $fotorama = $('.fotorama', $thumbs)
+    .clone()
+    //.show()
     .animate()
+    .css({ position: 'absolute' })
+    .appendTo('body')
     .fadeTo(0, 0)
-    .hide()
-    .appendTo('body');
+    .fotorama(),
+  fotorama = $fotorama.data('fotorama');
 
-  // variable to store the current scroll position
-  var scrollPosition;
+for (var _i = 0, _l = fotorama.data.length; _i < _l; _i++) {
+  // prepare id to use in fotorama.show()
+  fotorama.data[_i].id = fotorama.data[_i].img;
+}
 
-  // take all .fotorama blocks
-  $('.thumbs').each(function () {
-    var $thumbs = $(this),
+// bind clicks
+$thumbs.on('click', 'a', function (e) {
+  e.preventDefault();
 
-      // clone it and make fotorama
-      $fotorama = $('.fotorama', $thumbs)
-        .clone()
-        .css({ position: 'absolute' })
-        .appendTo('body')
-        .fadeTo(0, 0)
-        .fotorama(),
-      fotorama = $fotorama.data('fotorama');
+  var $this = $(this);
 
-    for (var _i = 0, _l = fotorama.data.length; _i < _l; _i++) {
-      // prepare id to use in fotorama.show()
-      fotorama.data[_i].id = fotorama.data[_i].img;
-    }
+  $overlay
+    .show()
+    .stop()
+    .fadeTo(150, 1, function () {
+      $fotorama.stop().fadeTo(150, 1);
 
-    // bind clicks
-    $thumbs.on('click', 'a', function (e) {
-      e.preventDefault();
+      // API calls
+      fotorama
+        // show needed frame
+        .show({ index: $this.attr('href'), time: 0 })
+        // open fullscreen
+        .requestFullScreen();
+    })
+    .animate();
+});
 
-      // save the current scroll position
-      scrollPosition = $(window).scrollTop();
-
-      var $this = $(this);
-
-      $overlay
-        .show()
-        .stop()
-        .fadeTo(150, 1, function () {
-          $fotorama.stop().fadeTo(150, 1);
-
-          // API calls
-          fotorama
-            // show needed frame
-            .show({ index: $this.attr('href'), time: 0 })
-            // open fullscreen
-            .requestFullScreen();
-        })
-        .animate();
-    });
-
-    $fotorama.on('fotorama:fullscreenexit', function () {
-      $fotorama.stop().fadeTo(0, 0);
-      $overlay.stop().fadeTo(300, 0, function () {
-        $overlay.hide();
-
-        // restore the scroll position
-        $(window).scrollTop(scrollPosition);
-      });
-    });
+$fotorama.on('fotorama:fullscreenexit', function () {
+  $fotorama.stop().fadeTo(0, 0);
+  $overlay.stop().fadeTo(300, 0, function () {
+    $overlay.hide();
   });
 });
+}); });
