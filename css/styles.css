@@ -431,6 +431,7 @@ footer {
   margin: 0 auto;
   display: flex;  
   justify-content: center;
+  flex-direction: column;
 }
 
 .contact h3 {
@@ -468,11 +469,14 @@ footer {
 .copyright {
   text-align: center;
   font-size: 14px;
-  margin-top: 80px;
 }
 
     .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.zero-studios-logo {
+    margin-top: 40px;
 }
