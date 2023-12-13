@@ -100,7 +100,7 @@
 
     .hero {
       height: 600px;
-      background-image: url("/background.jpeg");
+      background-image: url("/images/background.jpeg");
       background-size: cover;
       background-position: center;
       display: flex;
