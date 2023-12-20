@@ -1,11 +1,3 @@
-
-$(function () {
-  $('.scroll-down').click(function () {
-    $('html, body').animate({ scrollTop: $('#about').offset().top + 80 }, 'slow');
-    return false;
-  });
-});
-
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
