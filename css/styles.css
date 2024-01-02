@@ -237,6 +237,11 @@ body {
   object-fit: cover;
   margin-right: 40px;
   animation: fadeIn 2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
 }
 
 .profile-info {
