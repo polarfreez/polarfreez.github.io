@@ -99,6 +99,10 @@ body {
   background-color: #ffffff00;
 }
 
+#navbar-link:not(.navbar-about){
+  border-right: 1px solid rgba(255, 255, 255, .3);
+}
+
 .hero {
   height: 600px;
   background-image: url("/images/background.jpeg");
