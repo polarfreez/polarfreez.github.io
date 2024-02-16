@@ -19,26 +19,43 @@ permalink: /404.html
       text-align: center;
     }
     
-    #main-container {
+    .main-container {
       max-width: 600px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .text {
+      display: flex;
+      flex-direction: row;
     }
     
     h1 {
-      font-size: 5em;
+      display: inline-block;
+      border-right: 1px solid rgba(0, 0, 0, .3);
       margin: 0;
+      margin-right: 20px;
+      padding: 10px 23px 10px 0;
+      font-size: 24px;
+      font-weight: 500;
+      vertical-align: top;
       color: #bb86fc;
     }
     
     p {
-      font-size: 1.2em;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
     }
     
     #go-back {
       margin-top: 20px;
       padding: 10px 20px;
       font-size: 1.2em;
-      background-color: #bb86fc;
-      color: #121212;
+      border: 2px solid #bb86fc;
+      color: #bb86fc;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -46,7 +63,7 @@ permalink: /404.html
     }
     
     #go-back:hover {
-      background-color: #9a67ea;
+      box-shadow: inset #9a67ea 0px 0px 10px 3px,  #9a67ea 0px 0px 10px 3px;
     }
 
     /* CSS media query dentro de um stylesheet */
@@ -60,9 +77,11 @@ permalink: /404.html
 </style>
 </head>
 <body>
-<div id="main-container">
-  <h1>404</h1>
-  <p>Nesta escuridão, a página se perdeu. Em um vazio sombrio, desapareceu.</p>
+<div class="main-container">
+  <div class='text'>
+    <h1>404</h1>
+    <p>Nesta escuridão, a página se perdeu. Em um vazio sombrio, desapareceu.</p>
+  </div>
   <button id="go-back">Voltar</button>
 </div>
 <script>
