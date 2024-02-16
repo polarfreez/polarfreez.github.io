@@ -73,7 +73,7 @@
   background-color: #ffffff00;
 }
 
-#navbar-link:not(.navbar-about){
+.navbar-menu li:not(.navbar-about){
   border-right: 1px solid rgba(255, 255, 255, .3);
   padding-inline-end: 20px;
 }
