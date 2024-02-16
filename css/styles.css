@@ -15,15 +15,11 @@ body {
   background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
   font-family: "Prompt", Arial, Helvetica, sans-serif;
   color: white;
-}
-
-.container {
   margin: 0 auto;
   width: 100%;
   padding-right: 0;
   padding-left: 0;
 }
-
 
 .hero {
   height: 600px;
