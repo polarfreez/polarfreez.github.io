@@ -25,6 +25,8 @@ footer {
   background: #1b1c23;
   color: #fff;
   padding: 30px 0;
+  font-family: "Prompt", Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 .footer-container {
