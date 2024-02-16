@@ -77,3 +77,9 @@
 #navbar-link:not(.navbar-about){
   border-right: 1px solid rgba(255, 255, 255, .3);
 }
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+}
