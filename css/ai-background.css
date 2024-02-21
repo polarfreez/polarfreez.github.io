@@ -29,11 +29,11 @@ body {
   position: absolute;
   width: 50px;
   height: 50px;
-  background: rgb(167, 153, 204, 0.3);
+  background: rgb(167, 153, 204, 0.2);
   transform: rotate(45deg);
   animation: diamond-animation infinite ease;
   transition: all 90s ease-in;
-  box-shadow: 0 0 40px rgb(167, 153, 204, 0.3);
+  box-shadow: 0 0 40px rgb(167, 153, 204, 0.2);
 }
 
 @keyframes diamond-animation {
