@@ -14,6 +14,7 @@ $(document).ready(function () {
   // Rewrite the toggleMenu function using jQuery
   $("#navbar-logo").click(function () {
     var menu = document.getElementById("navbar-menu");
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+
+    if (menu.style.display === "flex") ? menu.classList.remove("active") : menu.classList.add("active");
   });
 })
