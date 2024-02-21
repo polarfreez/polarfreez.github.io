@@ -27,18 +27,18 @@
   object-fit: contain;
 }
 
-.navbar-menu {
+#navbar-menu {
   display: flex;
   list-style: none;
   margin-right: 20px;
   margin: 0;
 }
 
-.navbar-menu li {
+#navbar-menu li {
   margin: 0 10px;
 }
 
-.navbar-menu li a {
+#navbar-menu li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -76,18 +76,18 @@
   background-color: #ffffff00;
 }
 
-.navbar-menu li:not(.navbar-about){
+#navbar-menu li:not(.navbar-about){
   border-right: 1px solid rgba(255, 255, 255, .3);
   padding-inline-end: 20px;
 }
 
 
 @media (max-width: 768px) {
-  .navbar-menu {
+  #navbar-menu {
     display: none;
   }
 
-  .navbar-menu.active {
+  #navbar-menu.active {
     display: flex;
     flex-direction: column;
   }
