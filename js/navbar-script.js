@@ -18,7 +18,12 @@ $(document).ready(function () {
     if (menu.classList.contains("active")){
       menu.classList.remove("active");
       menu.style.animation = "menu-out 0.5s ease forwards"
+      setTimeout(() => {
+        menu.style.display = 'none';
+      }, 500);
+
     } else{
+      menu.style.display = 'flex';
       menu.classList.add("active"); 
       menu.style.animation = "menu-in 0.5s ease forwards";
     }
