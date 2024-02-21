@@ -229,18 +229,6 @@ body {
     margin-bottom: 20px;
   }
 
-  .navbar-logo {
-    animation: none;
-  }
-
-  @keyframes logoRotate {
-    0%{
-      transform: rotate(0);
-    }
-    100%{
-      transform: rotate(90);
-    }
-  }
 
   @keyframes bounce {
 
