@@ -87,6 +87,11 @@
     display: none;
   }
 
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+  }
+
   .navbar-logo {
     animation: none;
   }
