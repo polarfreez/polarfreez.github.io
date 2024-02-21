@@ -136,6 +136,15 @@
   }
 }
 
+@keyframes logo-rotate-inverse {
+  0%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
 @keyframes menu-in {
   0% {
     transform: translateY(-25px);
