@@ -12,8 +12,8 @@ $(document).ready(function () {
   })
 
   // Rewrite the toggleMenu function using jQuery
-  $(".navbar-logo").click(function () {
-    $(".navbar-logo").toggleClass("active");
-    $(".navbar-logo").toggleClass("active");
+  $("#navbar-logo").click(function () {
+    $("#navbar-logo").toggleClass("active");
+    $("#navbar-logo").toggleClass("active");
   });
 })
