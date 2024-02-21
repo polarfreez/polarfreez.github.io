@@ -11,7 +11,7 @@ $(document).ready(function () {
     }
   })
 
-  if (matchMedia('only screen and (max-width: 768px)').matches) {
+  if (matchMedia('(max-width: 768px)').matches) {
     // Rewrite the toggleMenu function using jQuery
     $("#navbar-logo").click(function () {
       var menu = document.getElementById("navbar-menu");
