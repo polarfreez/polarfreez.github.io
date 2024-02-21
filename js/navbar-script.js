@@ -24,7 +24,7 @@ $(document).ready(function () {
       }, 500);
 
     } else{
-      this.style.animation = "logoRotate 0.5s ease reverse";
+      this.style.animation = "logo-rotate 0.5s ease reverse";
       menu.style.display = 'flex';
       menu.classList.add("active");
       menu.style.animation = "menu-show 0.5s ease reverse";
