@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     if (menu.classList.contains("active")){
       this.style.animation = "logo-rotate-reverse 0.5s ease forwards";
-      menu.style.animation = "menu-in 0.5s ease forwards";
+      menu.style.animation = "menu-out 0.5s ease forwards";
       setTimeout(() => {
         menu.classList.remove("active");
         menu.style.display = 'none';
@@ -27,7 +27,7 @@ $(document).ready(function () {
       this.style.animation = "logo-rotate 0.5s ease forwards";
       menu.style.display = 'flex';
       menu.classList.add("active");
-      menu.style.animation = "menu-out 0.5s ease forwards";
+      menu.style.animation = "menu-in 0.5s ease forwards";
     }
   });
 })
