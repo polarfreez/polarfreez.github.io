@@ -229,6 +229,10 @@ body {
     margin-bottom: 20px;
   }
 
+  .navbar-logo {
+    animation: none;
+  }
+
   @keyframes logoRotate {
     0%{
       transform: rotate(0);
