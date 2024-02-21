@@ -22,7 +22,7 @@
   z-index: 10;
 }
 
-.navbar-logo {
+#navbar-logo {
   width: 50px;
   object-fit: contain;
 }
@@ -92,7 +92,7 @@
     flex-direction: column;
   }
 
-  .navbar-logo {
+  #navbar-logo {
     animation: none;
   }
 }
