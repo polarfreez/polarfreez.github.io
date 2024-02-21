@@ -96,6 +96,10 @@
     background: rgb(13, 16, 23);
   }
 
+  #navbar-menu {
+    display: none;
+  }
+
   #navbar-logo {
     animation: none;
   }
