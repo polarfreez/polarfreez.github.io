@@ -17,7 +17,6 @@ $(document).ready(function () {
 
     if (menu.classList.contains("active")){
       menu.style.animation = "menu-out 0.5s ease forwards"
-      $(".header").css("background", "transparent");
       setTimeout(() => {
         menu.classList.remove("active");
         menu.style.display = 'none';
@@ -26,7 +25,6 @@ $(document).ready(function () {
     } else{
       menu.style.display = 'flex';
       menu.classList.add("active");
-      $(".header").css("background", "rgb(13, 16, 23)");
       menu.style.animation = "menu-in 0.5s ease forwards";
     }
   });
