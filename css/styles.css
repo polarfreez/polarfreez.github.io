@@ -229,6 +229,15 @@ body {
     margin-bottom: 20px;
   }
 
+  @keyframes logoRotate {
+    0%{
+      transform: rotate(0);
+    }
+    100%{
+      transform: rotate(90);
+    }
+  }
+
   @keyframes bounce {
 
     0%,
