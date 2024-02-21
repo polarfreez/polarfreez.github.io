@@ -87,4 +87,8 @@
   .navbar-menu {
     display: none;
   }
+
+  .navbar-logo {
+    animation: none;
+  }
 }
