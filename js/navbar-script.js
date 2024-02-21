@@ -15,7 +15,14 @@ $(document).ready(function () {
   $("#navbar-logo").click(function () {
     var menu = document.getElementById("navbar-menu");
 
-    menu.classList.contains("active") ? menu.classList.remove("active"); menu.style.animation = "showMenu 0.5s ease backwards" : menu.classList.add("active"); menu.style.animation = " showMenu 0.5s ease forwards";
-    
+    if (menu.classList.contains("active")){
+      menu.classList.remove("active");
+      menu.style.animation = "showMenu 0.5s ease backwards"
+      menu.style.background = 'transparent';
+    } else{
+      menu.classList.add("active"); 
+      menu.style.animation = "showMenu 0.5s ease forwards";
+      menu.style.animation = "rgb(13, 16, 23)";
+    }
   });
 })
