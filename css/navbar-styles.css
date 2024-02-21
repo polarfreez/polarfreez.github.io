@@ -109,6 +109,7 @@
 
   #navbar-logo {
     animation: none;
+    z-index: 101;
   }
 
   #navbar-menu li {
