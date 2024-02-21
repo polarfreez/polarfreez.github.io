@@ -107,6 +107,7 @@
   #navbar-menu li {
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-inline-end: 0 !important;
     display: flex;
     justify-content: center;
   }
@@ -130,6 +131,9 @@
 @keyframes showMenu {
   0% {
     transform: translateY(-250px);
+    opacity: 0;
+  }
+  50%{
     opacity: 0;
   }
   100%{
