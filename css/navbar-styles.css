@@ -136,7 +136,7 @@
   }
 }
 
-@keyframes logo-rotate-inverse {
+@keyframes logo-rotate-reverse {
   0%{
     transform: rotate(180deg);
   }
