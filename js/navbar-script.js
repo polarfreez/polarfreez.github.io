@@ -17,12 +17,10 @@ $(document).ready(function () {
 
     if (menu.classList.contains("active")){
       menu.classList.remove("active");
-      menu.style.animation = "showMenu 0.5s ease backwards"
-      menu.style.background = 'transparent';
+      menu.style.animation = "menu-out 0.5s ease forwards"
     } else{
       menu.classList.add("active"); 
-      menu.style.animation = "showMenu 0.5s ease forwards";
-      menu.style.animation = "rgb(13, 16, 23)";
+      menu.style.animation = "menu-in 0.5s ease forwards";
     }
   });
 })
