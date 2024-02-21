@@ -9,4 +9,11 @@ $(document).ready(function () {
       $(".header").css("background", "transparent");
     }
   })
+
+  function toggleMenu() {
+    var menu = document.getElementById("navbar-menu");
+    var button = document.getElementById("hamburger-menu");
+    menu.classList.toggle("active");
+    button.classList.toggle("active");
+  }
 })
