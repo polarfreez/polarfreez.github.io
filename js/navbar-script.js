@@ -16,9 +16,9 @@ $(document).ready(function () {
     var menu = document.getElementById("navbar-menu");
 
     if (menu.classList.contains("active")){
-      menu.classList.remove("active");
       menu.style.animation = "menu-out 0.5s ease forwards"
       setTimeout(() => {
+        menu.classList.remove("active");
         menu.style.display = 'none';
       }, 500);
 
