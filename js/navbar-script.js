@@ -15,6 +15,7 @@ $(document).ready(function () {
   $("#navbar-logo").click(function () {
     var menu = document.getElementById("navbar-menu");
 
-    menu.classList.contains("active") ? menu.classList.remove("active") : menu.classList.add("active");
+    menu.classList.contains("active") ? menu.classList.remove("active"); menu.style.animation = "showMenu 0.5s ease backwards" : menu.classList.add("active"); menu.style.animation = " showMenu 0.5s ease forwards";
+    
   });
 })
