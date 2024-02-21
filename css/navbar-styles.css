@@ -127,7 +127,7 @@
 }
 
 
-@keyframes logoRotate {
+@keyframes logo-rotate {
   0%{
     transform: rotate(0deg);
   }
@@ -136,7 +136,7 @@
   }
 }
 
-@keyframes menu-in {
+@keyframes menu-show {
   0% {
     transform: translateY(-25px);
     opacity: 0;
@@ -144,16 +144,5 @@
   100%{
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes menu-out {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100%{
-    transform: translateY(-25px);
-    opacity: 0;
   }
 }
