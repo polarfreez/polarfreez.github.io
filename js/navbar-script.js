@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   // Rewrite the toggleMenu function using jQuery
   $("#navbar-logo").click(function () {
-    $("#navbar-menu").toggleClass("active");
-    $("#navbar-menu").toggleClass("active");
+    var menu = document.getElementById("navbar-menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
   });
 })
