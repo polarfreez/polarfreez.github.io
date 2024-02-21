@@ -24,10 +24,10 @@ $(document).ready(function () {
       }, 500);
 
     } else{
-      this.style.animation = "logo-rotate 0.5s ease reverse";
+      this.style.animation = "logo-rotate-inverse 0.5s ease forwards";
       menu.style.display = 'flex';
       menu.classList.add("active");
-      menu.style.animation = "menu-show 0.5s ease reverse";
+      menu.style.animation = "menu-out 0.5s ease forwards";
     }
   });
 })
