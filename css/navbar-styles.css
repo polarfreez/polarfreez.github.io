@@ -83,6 +83,12 @@
 
 
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
   #navbar-menu {
     display: none;
   }
@@ -97,6 +103,7 @@
   }
 
 #navbar-menu li:not(.navbar-about){
+  border-right: none;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
   padding-top: 20px;
 }
