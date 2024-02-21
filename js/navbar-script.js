@@ -1,3 +1,4 @@
+// JavaScript
 $(document).ready(function () {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -10,10 +11,9 @@ $(document).ready(function () {
     }
   })
 
-  function toggleMenu() {
-    var menu = document.getElementById("navbar-menu");
-    var button = document.getElementById("hamburger-menu");
-    menu.classList.toggle("active");
-    button.classList.toggle("active");
-  }
+  // Rewrite the toggleMenu function using jQuery
+  $("#hamburger-menu").click(function () {
+    $("#navbar-menu").toggleClass("active");
+    $("#hamburger-menu").toggleClass("active");
+  });
 })
