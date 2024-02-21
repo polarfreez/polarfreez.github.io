@@ -33,7 +33,7 @@ body {
   transform: rotate(45deg);
   animation: diamond-animation infinite ease;
   transition: all 90s ease-in;
-  box-shadow: 0 0 30px rgb(167, 153, 204, 0.1);
+  box-shadow: 0 0 30px rgb(167, 153, 204, 0.3);
 }
 
 @keyframes diamond-animation {
