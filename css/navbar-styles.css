@@ -132,11 +132,11 @@
     transform: rotate(0deg);
   }
   100%{
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 }
 
-@keyframes menu-show {
+@keyframes menu-in {
   0% {
     transform: translateY(-25px);
     opacity: 0;
@@ -144,5 +144,16 @@
   100%{
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes menu-out {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-25px);
+    opacity: 0;
   }
 }
