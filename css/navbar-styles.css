@@ -97,7 +97,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    animation: showMenu 0.5s ease-out forwards;
   }
 
   #navbar-logo {
@@ -130,7 +129,7 @@
 
 @keyframes showMenu {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-25px);
     opacity: 0;
   }
   100%{
