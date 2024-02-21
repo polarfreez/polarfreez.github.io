@@ -11,23 +11,27 @@ $(document).ready(function () {
     }
   })
 
-  // Rewrite the toggleMenu function using jQuery
-  $("#navbar-logo").click(function () {
-    var menu = document.getElementById("navbar-menu");
+  if (matchMedia('only screen and (max-width: 768px)').matches) {
+    // Rewrite the toggleMenu function using jQuery
+    $("#navbar-logo").click(function () {
+      var menu = document.getElementById("navbar-menu");
+  
+      if (menu.classList.contains("active")){
+        this.style.animation = "logo-rotate-reverse 0.5s ease forwards";
+        menu.style.animation = "menu-out 0.5s ease forwards";
+        setTimeout(() => {
+          menu.classList.remove("active");
+          menu.style.display = 'none';
+        }, 500);
+  
+      } else{
+        this.style.animation = "logo-rotate 0.5s ease forwards";
+        menu.style.display = 'flex';
+        menu.classList.add("active");
+        menu.style.animation = "menu-in 0.5s ease forwards";
+      }
+    });
+  }
 
-    if (menu.classList.contains("active")){
-      this.style.animation = "logo-rotate-reverse 0.5s ease forwards";
-      menu.style.animation = "menu-out 0.5s ease forwards";
-      setTimeout(() => {
-        menu.classList.remove("active");
-        menu.style.display = 'none';
-      }, 500);
 
-    } else{
-      this.style.animation = "logo-rotate 0.5s ease forwards";
-      menu.style.display = 'flex';
-      menu.classList.add("active");
-      menu.style.animation = "menu-in 0.5s ease forwards";
-    }
-  });
 })
