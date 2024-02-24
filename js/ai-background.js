@@ -1,19 +1,3 @@
-document.onload = function(){
-  var libraries = [
-      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
-  ];
-  
-  for (var i = 0; i < libraries.length; i++) {
-      var script = document.createElement('script');
-      script.src = libraries[i];
-      script.onload = function() {
-          console.log('Library loaded: ' + this.src);
-      };
-      document.head.appendChild(script);
-  }
-};
-
 $(document).ready(function () {  
   // Get the container element
   const background = document.getElementById("background");
