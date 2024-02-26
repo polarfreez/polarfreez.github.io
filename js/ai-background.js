@@ -1,5 +1,4 @@
-//document.addEventListener('DOMContentLoaded', function () {  
-export function backgroundAnimation(){
+
 // Get the container element
   const background = document.getElementById("background");
   
@@ -123,4 +122,3 @@ export function backgroundAnimation(){
    }
   }, 250);
 //});
-}
