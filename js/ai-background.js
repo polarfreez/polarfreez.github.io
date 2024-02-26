@@ -1,4 +1,4 @@
-
+function animateBackground(){
 // Get the container element
   const background = document.getElementById("background");
   
@@ -122,3 +122,6 @@
    }
   }, 250);
 //});
+}
+
+animateBackground();
