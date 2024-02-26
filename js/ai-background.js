@@ -1,4 +1,4 @@
-$(document).ready(function () {  
+document.addEventListener('DOMContentLoaded', function () {  
   // Get the container element
   const background = document.getElementById("background");
   
