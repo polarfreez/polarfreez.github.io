@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {  
+//document.addEventListener('DOMContentLoaded', function () {  
   // Get the container element
   const background = document.getElementById("background");
   
@@ -121,4 +121,4 @@ document.addEventListener('DOMContentLoaded', function () {
   }); 
    }
   }, 250);
-});
+//});
