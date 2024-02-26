@@ -46,8 +46,8 @@
     let newPosition;
     do {
       newPosition = {
-        x: Math.random() * background.offsetWidth,
-        y: Math.random() * background.offsetHeight,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
       };
     } while (!isPositionValid(newPosition, diamonds));
   
@@ -85,8 +85,8 @@
     let newPosition;
     do {
       newPosition = {
-        x: Math.random() * background.offsetWidth,
-        y: Math.random() * background.offsetHeight,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
       };
     } while (!isPositionValid(newPosition, diamonds));
   
