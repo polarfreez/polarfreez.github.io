@@ -59,7 +59,7 @@
     diamond.style.top = newPosition.y + "px";
     diamond.style.width = size + "px";
     diamond.style.height = size + "px";
-    diamond.style.rotate = '45deg';
+    diamond.style.transform = 'rotate(45deg)';
     diamond.style.opacity = '0.5';
   
     // Generate a random animation duration between 1s and 5s
