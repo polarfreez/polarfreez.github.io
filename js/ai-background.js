@@ -1,5 +1,6 @@
 //document.addEventListener('DOMContentLoaded', function () {  
-  // Get the container element
+export function (){
+// Get the container element
   const background = document.getElementById("background");
   
   // Set the number of diamonds to generate
@@ -122,3 +123,4 @@
    }
   }, 250);
 //});
+}
