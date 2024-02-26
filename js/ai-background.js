@@ -1,4 +1,4 @@
-document.onload = function () {  
+$(document).ready(function () {  
   // Get the container element
   const background = document.getElementById("background");
   
@@ -121,4 +121,4 @@ document.onload = function () {
   }); 
    }
   }, 250);
-};
+});
