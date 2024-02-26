@@ -121,4 +121,4 @@ document.onload = function () {
   }); 
    }
   }, 250);
-});
+};
