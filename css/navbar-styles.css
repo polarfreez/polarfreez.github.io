@@ -94,6 +94,7 @@
     flex-direction: column;
     width: 101%;
     background: rgb(13, 16, 23);
+    border: 1px solid rgb(43, 56, 75);
     right: 0;
   }
 
