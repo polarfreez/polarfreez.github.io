@@ -4,10 +4,12 @@ $(document).ready(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 10) {
       $(".header").css("background", "rgb(13, 16, 23)");
+      $(".header").css("border", "1px solid rgb(43, 56, 75)");
     }
 
     else {
       $(".header").css("background", "transparent");
+      $(".header").css("border", "transparent");
     }
   })
 
