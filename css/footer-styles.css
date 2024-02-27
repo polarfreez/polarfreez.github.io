@@ -23,6 +23,7 @@ footer {
   width: 100%;
   align-self: flex-end;
   background: rgb(13, 16, 23);
+  border: 1px solid #2B384B;
   color: #fff;
   padding: 30px 0;
   font-family: "Prompt", Arial, Helvetica, sans-serif;
