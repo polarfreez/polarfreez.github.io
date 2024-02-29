@@ -335,18 +335,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.ais {
-  font-family: "Be Vietnam Pro", sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-}
-
 .ai a {
   text-decoration: none;
 }
@@ -376,14 +364,6 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.ai-profile img {
-  box-shadow: black 0px 0px 20px;
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  object-fit: cover;
-}
-
 .ai-profile-name {
   font-size: 16px;
   margin-top: 10px;
@@ -398,6 +378,53 @@ body {
   margin-top: 30px;
   font-size: 1rem;
   text-align: center;
+}
+
+.ai-profile-picture {
+  box-shadow: black 0px 0px 20px;
+  width: 150px;
+  height: auto;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.ai-profile.stem .ai-profile-picture {
+  background: url('/ai-selector/media/stem.jpg');
+}
+
+.ai-profile.stem .ai-profile-picture {
+  background: url("/ai-selector/media/stella.jpg");
+}
+
+.ai-profile-picture::before {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  filter: blur(8px);
+  background-image: linear-gradient(133.61deg, #a87ffb 17.33%, #25a6e9 100.47%);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.ai-profile-picture:hover::before {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  animation: submitButton 10s linear infinite;
+}
+
+@keyframes ai-profile-hover {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 600px) {
