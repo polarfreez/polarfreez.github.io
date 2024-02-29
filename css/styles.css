@@ -382,12 +382,15 @@ body {
 }
 
 .ai-profile-picture, .ai-profile-picture img {
-  box-shadow: black 0px 0px 20px;
   width: 150px;
   height: auto;
   border-radius: 100%;
   object-fit: cover;
   position: relative;
+}
+
+.ai-profile-picture {
+  box-shadow: black 0px 0px 20px;
 }
 
 .ai-profile-picture:hover, .ai-profile-picture img:hover {
