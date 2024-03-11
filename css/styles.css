@@ -364,7 +364,7 @@ body {
   align-items: center;
   color: white;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .ai-profile-name {
