@@ -6,11 +6,21 @@ permalink: /404.html
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 Não Encontrado</title>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	
 <style>
+	@font-face {
+  font-family: Nerd;
+  src: url('/fonts/JetBrainsMonoNerdFont-Regular.ttf');
+}
+	
   body {
     background-color: #1f1e2f;
     color: #d9e1ef; 
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nerd", sans-serif;
     overflow: hidden;
     position: fixed;
     top: 50%;
@@ -35,7 +45,7 @@ permalink: /404.html
   }
 
 a {
-  font-family: "Hack-Nerd-Font", sans-serif;
+  font-family: "Nerd", sans-serif;
   text-decoration: none;
   color: #d9e1ef;
   font-height: 800;
@@ -43,6 +53,16 @@ a {
 
 li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+	body{
+		width: 100%;		
+	}
+
+	.container {
+		margin: 20px;
+	}
 }
 </style>
 </head>
