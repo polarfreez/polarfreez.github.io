@@ -7,58 +7,75 @@ permalink: /404.html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 Não Encontrado</title>
 <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #0d1017;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .main-container {
-      max-width: 600px;
-      display: flex;
-      flex-direction: column
-    }
+  body {
+    background-color: #1f1e2f;
+    color: #d9e1ef; 
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container {
+    margin: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  #emoji {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 4em;
+    color: #f28fad;
+  }
+  .message {
+    font-size: 2em;
+    margin-top: 20px;
+  }
 
-    .text {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    h1 {
-      display: inline-block;
-      border-right: 1px solid rgba(255, 255, 255, .3);
-      margin: 0;
-      margin-right: 20px;
-      padding: 10px 23px 10px 0;
-      font-size: 24px;
-      font-weight: 500;
-      vertical-align: top;
-      color: white;
-    }
-    
-    h2 {
-      font-size: 14px;
-      font-weight: normal;
-      line-height: inherit;
-      margin: 0;
-      padding: 0;
-    }
+a {
+  font-family: "Hack-Nerd-Font", sans-serif;
+  text-decoration: none;
+  color: #d9e1ef;
+  font-height: 800;
+}
 
+li {
+  margin-bottom: 10px;
+}
 </style>
 </head>
 <body>
-<div class="main-container">
-  <div class='text'>
-    <h1>404</h1>
-    <h2>Nesta escuridão, a página se perdeu. Em um vazio sombrio, desapareceu.</h2>
-  </div>
+<div class="container">
+	<div id="emoji"></div>
+	<p class="message">
+		404
+	</p>
+	<p class="subtext">
+		Sim, eu sei que você é um gênio da tecnologia que com certeza digitou a URL
+		corretamente. Mas já que estamos aqui, que tal algumas sugestões?
+	</p>
+	<ul>
+		<li>Verifique se você digitou a URL corretamente.</li>
+    
+    <li>Você pode tentar atualizar a página, mas não espere muito. A vida é cheia de decepções, e esta é apenas mais uma.</li>
+    
+		<li>
+			Ou simplesmente admita que errou feio e volte para a
+			<a href="/"> página inicial</a>.
+		</li>
+	</ul>
+	<p class="subsubtext">
+Se a página ainda não aparecer, talvez ela simplesmente não queira ser encontrada. Talvez seja hora de aceitar a derrota e seguir em frente.
+	</p>
 </div>
+
+    <script>
+const emoticons = ["(>_<)", "(>w<)", "( ._.)", "<(｀^´)>", "(—_—)", "(≧w≦)", "(－‸ლ)", "(･ω･)"];
+const emojiElement = document.querySelector("#emoji");
+
+emojiElement.textContent = emoticons[Math.floor(Math.random() * emoticons.length)];
+    </script>
 </body>
 </html>
