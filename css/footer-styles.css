@@ -42,10 +42,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-style: normal;
 }
 
-
+footer a {
+  font-style: normal;
+}
 
 .footer-container {
   max-width: 1200px;
