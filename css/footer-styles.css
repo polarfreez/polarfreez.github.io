@@ -70,7 +70,7 @@ footer {
 /* social icon animations */
 .social-icons a {
   display: inline-block;
-  margin-right: 10px;
+  margin-inline: 5px;
   font-size: 24px;
   transition: 0.3s;
   color: white;
