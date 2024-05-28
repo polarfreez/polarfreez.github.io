@@ -39,7 +39,9 @@ footer {
   padding: 30px 0;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: white;
-  top: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .footer-container {
