@@ -11,6 +11,8 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.3/fotorama.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +28,7 @@ body {
     rgba(19, 30, 49, 0) 100%
   );
   background: rgb(16, 21, 29);
-  font-family: "Nerd", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: white;
   margin: 0 auto;
   width: 100%;
