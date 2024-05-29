@@ -87,7 +87,7 @@
   background-color: #ffffff00;
 }
 
-#navbar-menu li:not(.navbar-about){
+#navbar-menu li:not(.navbar-faq){
   border-right: 1px solid rgba(255, 255, 255, .3);
   padding-inline-end: 20px;
 }
@@ -133,7 +133,7 @@
     justify-content: center;
   }
 
-#navbar-menu li:not(.navbar-about){
+#navbar-menu li:not(.navbar-faq){
   border-right: none;
   border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
