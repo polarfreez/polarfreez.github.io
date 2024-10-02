@@ -18,6 +18,12 @@
   src: url('/fonts/CaviarDreams.ttf');
 }
 
+@font-face {
+  font-family: CaviarDreams;
+  src: url('/fonts/CaviarDreams_Bold.ttf');
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
